@@ -11,7 +11,7 @@ namespace Trackmatic.Training
         {
             Console.WriteLine("Hell World!");
 
-            Console.WriteLine("This is a training app to demonstrate development workflow");
+            Console.WriteLine("This is a training app to demonstrate development workflow.");
 
             Console.ReadLine();
         }
