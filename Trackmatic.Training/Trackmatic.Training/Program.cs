@@ -10,6 +10,9 @@ namespace Trackmatic.Training
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome");
+
+            Console.ReadLine();
         }
     }
 }
