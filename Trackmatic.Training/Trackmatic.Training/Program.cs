@@ -10,6 +10,8 @@ namespace Trackmatic.Training
         static void Main(string[] args)
         {
             Console.WriteLine("Hell World!");
+
+            Console.ReadLine();
         }
     }
 }
