@@ -1,0 +1,16 @@
+﻿amending a file
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Wed Nov 23 13:01:21 2016 +0200
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	new file:   AmendFile.docx
+#	modified:   README RENAMED.docx
+#
+
