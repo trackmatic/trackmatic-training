@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackmatic.Training", "Trac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadLubeExcel", "LoadLubeExcel\LoadLubeExcel.csproj", "{8B6013C9-8768-4123-8772-A42106953C94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prj_VectorloadEntityContacts", "Prj_VectorloadEntityContacts\Prj_VectorloadEntityContacts.csproj", "{AF39E864-6195-43CE-80D3-40ACAA7A486F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,14 @@ Global
 		{8B6013C9-8768-4123-8772-A42106953C94}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B6013C9-8768-4123-8772-A42106953C94}.Release|x86.ActiveCfg = Release|Any CPU
 		{8B6013C9-8768-4123-8772-A42106953C94}.Release|x86.Build.0 = Release|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Debug|x86.Build.0 = Debug|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Release|x86.ActiveCfg = Release|Any CPU
+		{AF39E864-6195-43CE-80D3-40ACAA7A486F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
