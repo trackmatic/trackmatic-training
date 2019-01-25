@@ -40,7 +40,7 @@ namespace LoadLubeExcel
                     Value[i, 2] += Entities.ElementAt(i).Name;
                 }
 
-                oSheet.get_Range("A2", "C"+(Entities.Count-1) + Entities.Count).Value2 = Value;
+                oSheet.get_Range("A2", "C"+(Entities.Count-1)).Value2 = Value;
                 oSheet.Cells.Replace("#N/A", "");
 
                 var oRng = oSheet.get_Range("A1", "C1");
