@@ -7,17 +7,21 @@ namespace Prj_VectorloadEntityContacts
     {
         static void Main(string[] args)
         {
-            String[] VectorID = { "212", "213", "300", "216", "217", "266", "202", "221", "218", "219", "214", "220", "215", "222", "223", "349", "297", "204" };
-            var Entities = new List<Model>();
+            var VectorID = new List<string>() { "212", "213", "300", "216", "217", "266", "202", "221", "218", "219", "214", "220", "215", "222", "223", "349", "297", "204" };
+            var VectorHeadings = new List<string>() { "First Name", "Last Name", "Tel No", "Cell No", "Email", "Adn", "Adn Email", "Adn Sms", "Entity Name", "Entity Refernce" };
+            var fileName = "Vector";
+            var fileDirectory = $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/Temp";
+            var Entities = new List<EntityAndContactModel>();
+
             foreach (var ID in VectorID)
             {
-                var eLookUp = new EntityLookupAndMatch(ID);
-                eLookUp.PullData();
-                Entities.AddRange(eLookUp.Entities);
+                var entityLookUp = new EntityLookup(ID);
+                var LoadedEntity = entityLookUp.PullData();
+                Entities.AddRange(LoadedEntity);
             }
 
-            var writeE = new WriteToExcel(Entities, "Vector");
-            writeE.Write();
+            var writeFile = new WriteToExcel(Entities, fileName, VectorHeadings);
+            writeFile.Write(fileDirectory);
         }
     }
 }

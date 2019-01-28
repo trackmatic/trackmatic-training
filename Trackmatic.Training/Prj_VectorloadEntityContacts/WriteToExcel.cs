@@ -7,35 +7,36 @@ namespace Prj_VectorloadEntityContacts
 {
     public class WriteToExcel
     {
-        public WriteToExcel(List<Model> entities, string fileName)
+        public WriteToExcel(List<EntityAndContactModel> entities, string fileName, List<string> headings)
         {
             Entities = entities;
             _fileName = fileName;
+            Headings = headings;
         }
 
-        private List<Model> Entities { get; set; }
+        private List<EntityAndContactModel> Entities { get; set; }
         private string _fileName { get; set; }
+        private List<string> Headings { get; set; }
 
-        public void Write()
+        public void Write(string directory)
         {
             try
             {
-                var oXL = new Application();
-                oXL.Visible = true;
-                
-                var oWB = (_Workbook)(oXL.Workbooks.Add(""));
-                var oSheet = (_Worksheet)oWB.ActiveSheet;
+                var openExcelApp = new Application();
+                openExcelApp.Visible = true;
 
-                oSheet.Cells[1, 1] = "FirstName";
-                oSheet.Cells[1, 2] = "LastName";
-                oSheet.Cells[1, 3] = "TelNo";
-                oSheet.Cells[1, 4] = "CellNo";
-                oSheet.Cells[1, 5] = "Email";
-                oSheet.Cells[1, 6] = "PositionHeld";
-                oSheet.Cells[1, 7] = "Entity ID";
-                
-                oSheet.get_Range("A1", "G1").Font.Bold = true;
-                oSheet.get_Range("A1", "G1").VerticalAlignment = XlVAlign.xlVAlignCenter;
+                var openWorkBook = (_Workbook)(openExcelApp.Workbooks.Add(""));
+                var openSheet = (_Worksheet)openWorkBook.ActiveSheet;
+                var lastCollumn = 'A';
+                for (int i = 1; i <= Headings.Count; i++)
+                {
+                    openSheet.Cells[1, i] = Headings.ElementAt(i - 1);
+                    lastCollumn++;
+                }
+                lastCollumn--;
+
+                openSheet.get_Range("A1", lastCollumn + "1").Font.Bold = true;
+                openSheet.get_Range("A1", lastCollumn + "1").VerticalAlignment = XlVAlign.xlVAlignCenter;
 
                 var Value = new List<string[]>();
                 foreach (var Entity in Entities)
@@ -44,37 +45,37 @@ namespace Prj_VectorloadEntityContacts
                     {
                         foreach (var Contact in Entity.Contact)
                         {
-                            Value.Add(new string[] { Contact.FirstName, Contact.LastName, Contact.TelNo, Contact.CellNo, Contact.Email, Contact.PositionHeld, Entity.ID });
+                            foreach (var AdnConfig in Contact.AdnConfiguration.Types)
+                            {
+                                Value.Add(new string[] { Contact.FirstName, Contact.LastName, Contact.TelNo, Contact.CellNo, Contact.Email, AdnConfig, Contact.AdnConfiguration.Email.ToString(), Contact.AdnConfiguration.Sms.ToString(), Entity.Name, Entity.Reference });
+                            }
                         }
                     }
                 }
-                var arrValue = new string[Value.Count, 7];
-                for(int i = 0; i<Value.Count; i++)
+                var arrValue = new string[Value.Count, Headings.Count];
+                for (int i = 0; i < Value.Count; i++)
                 {
-                    arrValue[i, 0] = Value[i][0];
-                    arrValue[i, 1] = Value[i][1];
-                    arrValue[i, 2] = Value[i][2];
-                    arrValue[i, 3] = Value[i][3];
-                    arrValue[i, 4] = Value[i][4];
-                    arrValue[i, 5] = Value[i][5];
-                    arrValue[i, 6] = Value[i][6];
+                    for (int j = 0; j <= Headings.Count - 1; j++)
+                    {
+                        arrValue[i, j] = Value[i][j];
+                    }
                 }
 
                 if (Value.Count != 0)
                 {
-                    oSheet.get_Range("A2", "G" + (Entities.Count - 1) + Entities.Count).Value2 = arrValue;
+                    openSheet.get_Range("A2", lastCollumn + "" + (Entities.Count - 1)).Value2 = arrValue;
                 }
-                oSheet.Cells.Replace("#N/A", "");
+                openSheet.Cells.Replace("#N/A", "");
 
-                
-                var oRng = oSheet.get_Range("A1", "G1");
+
+                var oRng = openSheet.get_Range("A1", lastCollumn + "1");
                 oRng.EntireColumn.AutoFit();
 
-                oXL.Visible = false;
-                oXL.UserControl = false;
-                oWB.SaveAs($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/Temp/{_fileName}.xls", XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing,
+                openExcelApp.Visible = false;
+                openExcelApp.UserControl = false;
+                openWorkBook.SaveAs($"{directory}/{_fileName}", XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing,
                     false, false, XlSaveAsAccessMode.xlNoChange);
-                oWB.Close();
+                openWorkBook.Close();
 
             }
             catch (Exception theException)

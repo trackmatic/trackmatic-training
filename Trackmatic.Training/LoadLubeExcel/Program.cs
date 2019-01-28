@@ -1,13 +1,20 @@
-﻿namespace LoadLubeExcel
+﻿using System;
+using System.Collections.Generic;
+
+namespace LoadLubeExcel
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var eLook = new EntityLookupAndMatch("556");
-            eLook.PullData();
-            var wE = new WriteToExcel(eLook.Entities, "LubeMarketing");
-            wE.Write();
+            var ClientID = "579";
+            var ClientHeadings = new List<string>() { "Entity Name", "Entity Refernce" };
+            var fileName = "LubeMarketing";
+            var fileDirectory = $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/Temp";
+            var entityLookUp = new EntityLookup(ClientID);
+            var entities = entityLookUp.PullData();
+            var writeFile = new WriteToExcel(entities, fileName, ClientHeadings);
+            writeFile.Write(fileDirectory);
         }
     }
 }

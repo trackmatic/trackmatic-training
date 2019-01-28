@@ -7,48 +7,52 @@ namespace LoadLubeExcel
 {
     public class WriteToExcel
     {
-        public WriteToExcel(List<Model> entities, string fileName)
+        public WriteToExcel(List<EntityModel> entities, string fileName, List<string> headings)
         {
             Entities = entities;
             _fileName = fileName;
+            Headings = headings;
         }
 
-        private List<Model> Entities { get; set; }
+        private List<EntityModel> Entities { get; set; }
         private string _fileName { get; set; }
+        private List<string> Headings { get; set; }
 
-        public void Write()
+        public void Write(string directory)
         {
             try
             {
-                var oXL = new Application();
+                var openExcelApp = new Application();
 
-                var oWB = (_Workbook)(oXL.Workbooks.Add(""));
-                var oSheet = (_Worksheet)oWB.ActiveSheet;
-
-                oSheet.Cells[1, 1] = "Entity ID";
-                oSheet.Cells[1, 2] = "Entity Reference";
-                oSheet.Cells[1, 3] = "Entity Name";
-
-                oSheet.get_Range("A1", "C1").Font.Bold = true;
-                oSheet.get_Range("A1", "C1").VerticalAlignment = XlVAlign.xlVAlignCenter;
-
-                var Value = new string[Entities.Count, 3];
-                for(int i = 0; i<Entities.Count-1; i++)
+                var openWorkBook = (_Workbook)(openExcelApp.Workbooks.Add(""));
+                var openSheet = (_Worksheet)openWorkBook.ActiveSheet;
+                var lastCollumn = 'A';
+                for (int i = 1; i <= Headings.Count; i++)
                 {
-                    Value[i, 0] += Entities.ElementAt(i).ID;
-                    Value[i, 1] += Entities.ElementAt(i).Ref;
-                    Value[i, 2] += Entities.ElementAt(i).Name;
+                    openSheet.Cells[1, i] = Headings.ElementAt(i - 1);
+                    lastCollumn++;
+                }
+                lastCollumn--;
+
+                openSheet.get_Range("A1", lastCollumn + "1").Font.Bold = true;
+                openSheet.get_Range("A1", lastCollumn + "1").VerticalAlignment = XlVAlign.xlVAlignCenter;
+
+                var Value = new string[Entities.Count, Headings.Count];
+                for (int i = 0; i < Entities.Count - 1; i++)
+                {
+                    Value[i, 0] += Entities.ElementAt(i).Name;
+                    Value[i, 1] += Entities.ElementAt(i).Reference;
                 }
 
-                oSheet.get_Range("A2", "C"+(Entities.Count-1)).Value2 = Value;
-                oSheet.Cells.Replace("#N/A", "");
+                openSheet.get_Range("A2", lastCollumn + "" + (Entities.Count - 1)).Value2 = Value;
+                openSheet.Cells.Replace("#N/A", "");
 
-                var oRng = oSheet.get_Range("A1", "C1");
+                var oRng = openSheet.get_Range("A1", lastCollumn + "1");
                 oRng.EntireColumn.AutoFit();
 
-                oWB.SaveAs($"{Environment.CurrentDirectory}/{_fileName}.xls", XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing,
+                openWorkBook.SaveAs($"{directory}/{_fileName}", XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing,
                     false, false, XlSaveAsAccessMode.xlNoChange);
-                oWB.Close();
+                openWorkBook.Close();
             }
             catch (Exception theException)
             {

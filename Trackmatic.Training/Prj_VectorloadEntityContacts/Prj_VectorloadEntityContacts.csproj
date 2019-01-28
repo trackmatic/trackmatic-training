@@ -135,15 +135,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityLookupAndMatch.cs" />
-    <Compile Include="Model.cs" />
+    <Compile Include="EntityLookup.cs" />
+    <Compile Include="EntityAndContactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WriteToExcel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

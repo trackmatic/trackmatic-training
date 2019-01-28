@@ -7,40 +7,41 @@ using Trackmatic.Rest.Routing.Model;
 
 namespace Prj_VectorloadEntityContacts
 {
-    public class EntityLookupAndMatch
+    public class EntityLookup
     {
         private readonly string _mainClientId;
-        private List<Model> entities = new List<Model>();
+        private List<EntityAndContactModel> entities = new List<EntityAndContactModel>();
 
-        public List<Model> Entities
+        public List<EntityAndContactModel> Entities
         {
             get { return entities; }
             set { entities = value; }
         }
 
 
-        public EntityLookupAndMatch(string mainClientId)
+        public EntityLookup(string mainClientId)
         {
             _mainClientId = mainClientId;
         }
 
-        public void PullData()
+        public List<EntityAndContactModel> PullData()
         {
             var api = CreateLogin(_mainClientId);
             var batch = new BatchQuery<Entity>(new BatchOptions
             {
                 Write = 512,
                 Read = 512
-            }, api, new LoadEntitiesInBatches(), EntityLookup);
+            }, api, new LoadEntitiesInBatches(), EntityLoad);
             batch.Execute();
-            
+            return entities;
+
         }
 
-        private void EntityLookup(Api api, Entity loadedEntity)
+        private void EntityLoad(Api api, Entity loadedEntity)
         {
             if (loadedEntity != null)
             {
-                Entities.Add(new Model(loadedEntity.Id, loadedEntity.Contacts.ToList())); 
+                Entities.Add(new EntityAndContactModel(loadedEntity.Name, loadedEntity.Reference, loadedEntity.Contacts.ToList()));
             }
         }
         private Api CreateLogin(string clientId)
