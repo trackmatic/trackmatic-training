@@ -34,7 +34,7 @@ namespace LoadEntityAndEntityLoaction
             {
                 foreach (var Deco in loadedEntity.Decos)
                 {
-                    if (checkCoord(Deco))
+                    if (CheckCoord(Deco))
                     {
                         Entities.Add(new EntityAndLocationModel(loadedEntity.Name, loadedEntity.Reference, Deco.Name, Deco.Reference));  
                     }
@@ -49,12 +49,12 @@ namespace LoadEntityAndEntityLoaction
             return api;
         }
 
-        private bool checkCoord(DecoAlias Deco)
+        private bool CheckCoord(DecoAlias Deco)
         {
             if (Deco.Entrance == null) return false;
             var lat = Deco.Entrance.Latitude;
             var lon = Deco.Entrance.Longitude;
-            if (lat == null || lat == 0.0 && lon == null || lon == 0.0) return false;
+            if (lat == 0.0 || lon == 0.0) return false;
             else return true;
         }
 

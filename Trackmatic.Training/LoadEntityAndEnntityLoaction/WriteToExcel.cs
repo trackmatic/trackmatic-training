@@ -8,21 +8,24 @@ namespace LoadEntityAndEntityLoaction
 {
     public class WriteToExcel
     {
-        public WriteToExcel(List<EntityAndLocationModel> entities, string _fileName, List<string> headings)
+        public WriteToExcel(List<EntityAndLocationModel> entities, string filename, List<string> headings, string path)
         {
             Entities = entities;
-            this._fileName = _fileName;
+            Filename = filename;
             Headings = headings;
+            Path = path;
+            Excel = new ExcelPackage();
         }
 
         private List<EntityAndLocationModel> Entities { get; set; }
-        private string _fileName { get; set; }
+        private string Filename { get; set; }
         private List<string> Headings { get; set; }
+        private string Path { get; set; }
+        private ExcelPackage Excel { get; set; }
 
-        public void Write(string directory)
+        public void Write()
         {
-            var excel = new ExcelPackage();
-            var workSheet = excel.Workbook.Worksheets.Add("Sheet1");
+            var workSheet = Excel.Workbook.Worksheets.Add("Sheet1");
             
             workSheet.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             workSheet.Row(1).Style.Font.Bold = true;
@@ -41,9 +44,12 @@ namespace LoadEntityAndEntityLoaction
                 workSheet.Cells[i, 4].Value = Entities.ElementAt(i - 2).LocationReference;
             }
 
-            Stream stream = File.Create($"{directory}/{_fileName}.xlsx");
-            excel.SaveAs(stream);
-            stream.Close();
+            if (!Directory.Exists(Path)) Directory.CreateDirectory(Path);
+
+            using (var stream = File.Create($"{Path}/{Filename}.xlsx"))
+            {
+                Excel.SaveAs(stream);
+            }
         }
     }
 }
