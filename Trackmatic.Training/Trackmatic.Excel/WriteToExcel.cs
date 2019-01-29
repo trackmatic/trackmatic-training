@@ -34,7 +34,7 @@ namespace Trackmatic.Excel
         }
         public void AmmendToSheet(List<string[]> collection)
         {
-            if (Excel == null) Console.WriteLine("No File Found");
+            if (Excel == null || WorkSheet == null) Console.WriteLine("No File or Sheet Found");
             else
             {
                 var end = WorkSheet.Dimension.End.Row+1;
