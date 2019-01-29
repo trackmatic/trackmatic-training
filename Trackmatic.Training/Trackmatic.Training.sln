@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadEntityAndEntityLoaction
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackmatic.Excel", "Trackmatic.Excel\Trackmatic.Excel.csproj", "{00E8F0CF-25FC-45B3-B809-749B717CEC24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackmatic.ExcelTest", "Trackmatic.ExcelTest\Trackmatic.ExcelTest.csproj", "{7F2421BF-5C36-4F50-AD32-4201E087CB5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,14 @@ Global
 		{00E8F0CF-25FC-45B3-B809-749B717CEC24}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00E8F0CF-25FC-45B3-B809-749B717CEC24}.Release|x86.ActiveCfg = Release|Any CPU
 		{00E8F0CF-25FC-45B3-B809-749B717CEC24}.Release|x86.Build.0 = Release|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Debug|x86.Build.0 = Debug|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F2421BF-5C36-4F50-AD32-4201E087CB5D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
