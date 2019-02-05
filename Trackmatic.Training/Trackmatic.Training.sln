@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackmatic.ExcelTest", "Tra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadVectorEntityAdn", "LoadVectorEntityAdn\LoadVectorEntityAdn.csproj", "{295656FB-76DD-4DC6-8F7B-C1B39A3EE264}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTTLoadRouteActionEntity", "RTTLoadRouteActionEntity\RTTLoadRouteActionEntity.csproj", "{5E4A8B4F-7149-402F-95CD-3E12C250AA63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,14 @@ Global
 		{295656FB-76DD-4DC6-8F7B-C1B39A3EE264}.Release|Any CPU.Build.0 = Release|Any CPU
 		{295656FB-76DD-4DC6-8F7B-C1B39A3EE264}.Release|x86.ActiveCfg = Release|Any CPU
 		{295656FB-76DD-4DC6-8F7B-C1B39A3EE264}.Release|x86.Build.0 = Release|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Debug|x86.Build.0 = Debug|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Release|x86.ActiveCfg = Release|Any CPU
+		{5E4A8B4F-7149-402F-95CD-3E12C250AA63}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
