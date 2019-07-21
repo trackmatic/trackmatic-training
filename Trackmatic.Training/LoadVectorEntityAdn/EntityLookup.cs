@@ -27,8 +27,8 @@ namespace LoadVectorEntityAdn
             var api = CreateLogin(_mainClientId);
             var batch = new BatchQuery<Entity>(new BatchOptions
             {
-                Write = 512,
-                Read = 512
+                Write = 1024,
+                Read = 1024
             }, api, new LoadEntitiesInBatches(), EntityLoad);
             batch.Execute();
             return Entities;
@@ -39,10 +39,10 @@ namespace LoadVectorEntityAdn
         {
             if (loadedEntity != null && loadedEntity.Reference != null && loadedEntity.Contacts != null)
             {
-                if (CompareId.Contains(loadedEntity.Reference.Replace(" ", string.Empty)))
-                {
+                //if (CompareId.Contains(loadedEntity.Reference.Replace(" ", string.Empty)))
+                //{
                     Entities.Add(new EntityAndContactModel(loadedEntity.Name, loadedEntity.Reference, loadedEntity.Contacts.ToList(), _mainClientId, loadedEntity.Decos.ToList())); 
-                }
+                //}
             }
         }
         private Api CreateLogin(string clientId)

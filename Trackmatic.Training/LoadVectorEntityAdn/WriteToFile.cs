@@ -27,14 +27,18 @@ namespace LoadVectorEntityAdn
             var Value = new List<string[]>();
             foreach (var item in Collection)
             {
+                item.Contact.Any(x => !string.IsNullOrEmpty(x.Email));
                 foreach (var Contact in item.Contact)
                 {
-                    var city = string.Empty;
-                    foreach (var deco in item.Deco)
+                    if (!string.IsNullOrEmpty(Contact.Email))
                     {
-                        city = (deco.StructuredAddress == null) ? "unknown" : deco.StructuredAddress.City;
+                        var city = string.Empty;
+                        foreach (var deco in item.Deco)
+                        {
+                            city = (deco.StructuredAddress == null) ? "unknown" : deco.StructuredAddress.City;
                             Value.Add(new string[] { Contact.FirstName, Contact.LastName, Contact.TelNo, Contact.CellNo, Contact.Email, string.Join(",", Contact.AdnConfiguration.Types),
-                        Contact.AdnConfiguration.Email.ToString(), Contact.AdnConfiguration.Sms.ToString(), item.Name, item.Reference, deco.Name, city, item.ClientId}); 
+                        Contact.AdnConfiguration.Email.ToString(), Contact.AdnConfiguration.Sms.ToString(), item.Name, item.Reference, deco.Name, city, item.ClientId});
+                        } 
                     }
                 }
             }

@@ -10,6 +10,7 @@ namespace Prj_VectorloadEntityContacts
     public class EntityLookup
     {
         private readonly string _mainClientId;
+        private readonly List<string> references;
         private List<EntityAndContactModel> entities = new List<EntityAndContactModel>();
 
         public List<EntityAndContactModel> Entities
@@ -19,9 +20,10 @@ namespace Prj_VectorloadEntityContacts
         }
 
 
-        public EntityLookup(string mainClientId)
+        public EntityLookup(string mainClientId, List<string> References)
         {
             _mainClientId = mainClientId;
+            references = References;
         }
 
         public List<EntityAndContactModel> PullData()
@@ -41,7 +43,10 @@ namespace Prj_VectorloadEntityContacts
         {
             if (loadedEntity != null)
             {
-                Entities.Add(new EntityAndContactModel(loadedEntity.Name, loadedEntity.Reference, loadedEntity.Contacts.ToList()));
+                if (references.Contains(loadedEntity.Reference))
+                {
+                    Entities.Add(new EntityAndContactModel(loadedEntity.Name, loadedEntity.Reference, loadedEntity.Contacts.ToList())); 
+                }
             }
         }
         private Api CreateLogin(string clientId)
