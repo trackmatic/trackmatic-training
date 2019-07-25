@@ -23,7 +23,6 @@ namespace SerialiserConsoleApp
             var Serialiser = new DataContractSerializer(typeof(ConsignmentStops));
 
             Console.WriteLine("Beginning serilisation.");
-            // (Consignment) casts the serialiser to an object of type Consignments.
             var consignmentModel = (ConsignmentStops)Serialiser.ReadObject(File.OpenRead(fileName));
             Console.WriteLine("Serialisation finished.\n");
             Transform(consignmentModel);

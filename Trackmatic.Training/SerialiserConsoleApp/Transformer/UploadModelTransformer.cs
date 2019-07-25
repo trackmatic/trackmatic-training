@@ -10,11 +10,10 @@ namespace SerialiserConsoleApp.Transformer
 {
     public class UploadModelTransformer
     {
-        private readonly SiteData _site; // The ID and name of the site.
-        private readonly Stop _stop; // The Consignments, Consignee, and Consignor for the stop.
-        private List<string> _entityContactIntegrationKeys = new List<string>(); // List containing integration keys.
-
-        // Constructor.
+        private readonly SiteData _site;
+        private readonly Stop _stop;
+        private List<string> _entityContactIntegrationKeys = new List<string>(); 
+        
         public UploadModelTransformer(SiteData site, Stop stop)
         {
             _site = site;
@@ -49,43 +48,43 @@ namespace SerialiserConsoleApp.Transformer
                 Consignment = new DataOwnershipAreaData()
                 {
                     Create = "Accept",
-                    Delete = "Accept",
+                    Delete = "Ignore",
                     Update = "Accept"
                 },
                 Entity = new DataOwnershipAreaData()
                 {
                     Create = "Accept",
-                    Delete = "Accept",
+                    Delete = "Ignore",
                     Update = "Ignore"
                 },
                 EntityContact = new DataOwnershipAreaData()
                 {
                     Create = "Accept",
-                    Delete = "Accept",
+                    Delete = "Ignore",
                     Update = "Ignore"
                 },
                 Load = new DataOwnershipAreaData()
                 {
                     Create = "Accept",
-                    Delete = "Accept",
+                    Delete = "Ignore",
                     Update = "Ignore"
                 },
                 Location = new DataOwnershipAreaData()
                 {
                     Create = "Accept",
-                    Delete = "Accept",
+                    Delete = "Ignore",
                     Update = "Ignore"
                 },
                 ShippingAddress = new DataOwnershipAreaData()
                 {
                     Create = "Accept",
-                    Delete = "Accept",
+                    Delete = "Ignore",
                     Update = "Ignore"
                 },
                 TravelPlan = new DataOwnershipAreaData()
                 {
                     Create = "Accept",
-                    Delete = "Accept",
+                    Delete = "Ignore",
                     Update = "Ignore"
                 }
             };
@@ -95,10 +94,9 @@ namespace SerialiserConsoleApp.Transformer
         #region Consignment
         private List<ConsignmentData> CreateConsignmentData()
         {
-            var data = new List<ConsignmentData>(); // List containing all the consignment data.
+            var data = new List<ConsignmentData>();
             foreach (var consignment in _stop.Consignments)
             {
-                // Seperate pickups from dropoffs.
                 switch (consignment.Nature.ToLower().Trim())
                 {
                     case "install":
@@ -133,6 +131,7 @@ namespace SerialiserConsoleApp.Transformer
                         EntityIntegrationKey = _stop.Consignee.Reference,
                         ShippingAddressIntegrationKey = _stop.Consignee.Reference,
                         IntegrationKey = Utils.RemoveIllegalChars(consignment.Reference),
+                        DueAt = consignment.DueAtDateTime.ToUniversalTime(),
                         TimerType = "Up",
                         HandlingUnits = CreateConsignmentHandlingUnitsData(consignment.HandlingUnits),
                         SpecialInstructions = consignment.SpecialInstructions,
@@ -213,13 +212,13 @@ namespace SerialiserConsoleApp.Transformer
                 },
                 Dropoffs = new List<DropoffData>() { },
             };
-            switch (consignment.Nature.ToLowerInvariant())
-            {
-                default:
-                    consignmentData.Reference = $"{Utils.RemoveIllegalChars(consignment.Reference)}_Collection";
-                    consignmentData.IntegrationKey = $"{consignmentData.IntegrationKey}_Col";
-                    break;
-            }
+            //switch (consignment.Nature.ToLowerInvariant())
+            //{
+            //    default:
+            //        consignmentData.Reference = $"{Utils.RemoveIllegalChars(consignment.Reference)}_Collection";
+            //        consignmentData.IntegrationKey = $"{consignmentData.IntegrationKey}_Col";
+            //        break;
+            //}
             return consignmentData;
         }
 
@@ -237,14 +236,14 @@ namespace SerialiserConsoleApp.Transformer
                     new DropoffData()
                     {
                         EntityContactIntegrationKeys = _entityContactIntegrationKeys,
-                        IntegrationKey = $"{Utils.RemoveIllegalChars(consignment.Reference)}_DropOff",
+                        IntegrationKey = $"{Utils.RemoveIllegalChars(consignment.Reference)}",
                         Reference = Utils.RemoveIllegalChars(consignment.Reference),
                         InternalReference = consignment.InternalReference,
                         MaximumServiceTime = Utils.DetermineMst(_stop),
                         ExpectedCompletionDate = consignment.DueAtDateTime.ToUniversalTime(),
                         DueAt = consignment.DueAtDateTime.ToUniversalTime(),
-                        EntityIntegrationKey = $"{_stop.Consignee.Reference}_Consignee",
-                        ShippingAddressIntegrationKey = $"{_stop.Consignee.Reference}_Consignee",
+                        EntityIntegrationKey = $"{_stop.Consignee.Reference}",
+                        ShippingAddressIntegrationKey = $"{_stop.Consignee.Reference}",
                         TimerType = "Up",
                         HandlingUnits = CreateConsignmentHandlingUnitsData(consignment.HandlingUnits),
                         SpecialInstructions = consignment.SpecialInstructions,
