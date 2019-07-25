@@ -55,7 +55,7 @@ namespace SerialiserConsoleApp.Transformer
                 {
                     Create = "Accept",
                     Delete = "Ignore",
-                    Update = "Ignore"
+                    Update = "Accept"
                 },
                 EntityContact = new DataOwnershipAreaData()
                 {

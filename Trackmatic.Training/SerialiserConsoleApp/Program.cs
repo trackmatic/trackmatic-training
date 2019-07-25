@@ -21,10 +21,8 @@ namespace SerialiserConsoleApp
         private static void SerialiseAndTransform(string fileName)
         {
             var Serialiser = new DataContractSerializer(typeof(ConsignmentStops));
-
-            Console.WriteLine("Beginning serilisation.");
             var consignmentModel = (ConsignmentStops)Serialiser.ReadObject(File.OpenRead(fileName));
-            Console.WriteLine("Serialisation finished.\n");
+
             Transform(consignmentModel);
         }
 
@@ -33,8 +31,6 @@ namespace SerialiserConsoleApp
             var stops = consignmentModel.Stops;
             var site = SiteData.GetSites();
             var api = CreateApi(site);
-            Console.WriteLine("Beginning model transformation.");
-            int current = 1;
             foreach (var stop in stops)
             {
                 var transformer = new UploadModelTransformer(site, stop);
@@ -42,11 +38,7 @@ namespace SerialiserConsoleApp
                 var integration = api.Organisations.Current.Routes.Integration(site.SiteId);
 
                 SubmitRecord(integration, uploadModel);
-                Console.WriteLine($"File {current} of {stops.Count} uploaded successfully.");
-                current++;
             }
-            Console.WriteLine("Program has run successfully.");
-
             Console.ReadKey();
         }
 
