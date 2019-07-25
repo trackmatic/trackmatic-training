@@ -97,15 +97,7 @@ namespace SerialiserConsoleApp.Transformer
             var data = new List<ConsignmentData>();
             foreach (var consignment in _stop.Consignments)
             {
-                switch (consignment.Nature.ToLower().Trim())
-                {
-                    case "install":
-                        data.Add(CreatePickupData(consignment));
-                        break;
-                    default:
-                        data.Add(CreateDropOffData(consignment));
-                        break;
-                }
+                   data.Add(CreateDropOffData(consignment));
             }
             return data;
         }
@@ -154,7 +146,7 @@ namespace SerialiserConsoleApp.Transformer
 
                         Requirements = new RequirementsData()
                         {
-                            SuccessSequence = new List<string> { "odometer", "actondebrief", "signature", "image", "servicerating" },
+                            SuccessSequence = new List<string> { "odometer", "actiondebrief", "signature", "image", "servicerating" },
                             FailureSequence = new List<string> { "odometer", "image" },
                             OdometerReadings = new List<OdometerReadingData>
                             {
@@ -265,7 +257,7 @@ namespace SerialiserConsoleApp.Transformer
                         },
                         Requirements = new RequirementsData()
                         {
-                            SuccessSequence = new List<string> { "odometer", "consignmentdebrief", "signature", "image", "servicerating" },
+                            SuccessSequence = new List<string> { "odometer", "actiondebrief", "signature", "image", "servicerating" },
                             FailureSequence = new List<string>{ "odometer", "image"},
                             OdometerReadings = new List<OdometerReadingData>
                             {
