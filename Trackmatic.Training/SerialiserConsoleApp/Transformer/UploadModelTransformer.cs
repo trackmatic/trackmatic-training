@@ -371,7 +371,7 @@ namespace SerialiserConsoleApp.Transformer
             var consignee = new EntityData()
             {
                 IntegrationKey = _stop.Consignee.Reference,
-                Name = _stop.Consignor.Name,
+                Name = _stop.Consignee.Name,
                 IsAdhoc = false,
                 Reference = _stop.Consignee.Reference
             };
