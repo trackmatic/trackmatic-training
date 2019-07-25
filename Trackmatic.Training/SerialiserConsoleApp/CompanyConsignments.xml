@@ -1,0 +1,141 @@
+﻿<?xml version="1.0"?>
+<ConsignmentStops xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wwww.trackmatic.co.za/schema/Integration/Template">
+  <SiteId>516</SiteId>
+  <SiteName>Mifa WH Teljoy Rental</SiteName>
+  <Stops>
+    <Stop>
+      <Consignments>
+        <Consignment>
+          <AmountEx>0</AmountEx>
+          <AmountIncl>0</AmountIncl>
+          <DueAtDateTime>2019-07-17T00:00:00</DueAtDateTime>
+          <HandlingUnits>
+            <HandlingUnit>
+              <Barcode>0SY94ADM300420</Barcode>
+              <Code>NSFRDSAMSRS50N3C13S8</Code>
+              <Reference>0SY94ADM300420</Reference>
+              <Description>Samsung 501L Elegant Inox Side by Side Fridge/Freezer with water and ice dispenser</Description>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Pieces>1</Pieces>
+              <Volume>0</Volume>
+              <Width>0</Width>
+              <Weight>0</Weight>
+              <AmountEx>0</AmountEx>
+              <AmountIncl>0</AmountIncl>
+              <Discount>0</Discount>
+            </HandlingUnit>
+            <HandlingUnit>
+              <Barcode>OCGB5DBM300647</Barcode>
+              <Code>NSWMSAMWA15J5730SS</Code>
+              <Reference>OCGB5DBM300647</Reference>
+              <Description>Samsung 15kg Silver Top Loader Washing Machine</Description>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Pieces>1</Pieces>
+              <Volume>0</Volume>
+              <Width>0</Width>
+              <Weight>0</Weight>
+              <AmountEx>0</AmountEx>
+              <AmountIncl>0</AmountIncl>
+              <Discount>0</Discount>
+            </HandlingUnit>
+          </HandlingUnits>
+          <Owner>
+            <Name>Jow</Name>
+            <Reference></Reference>
+          </Owner>
+          <IsCod>false</IsCod>
+          <isCTC>false</isCTC>
+          <Nature>Install</Nature>
+          <Reference>I_652_108694</Reference>
+          <InternalReference>xyz</InternalReference>
+          <SpecialInstructions >* please call client on Delivery thank you {</SpecialInstructions>
+          <Pieces>1</Pieces>
+          <Width>10</Width>
+          <Height>10</Height>
+          <Length>10</Length>
+          <Pallets>1</Pallets>
+          <Volume>10</Volume>
+          <Weight>10</Weight>
+          <CommodityType>Boxed</CommodityType>
+          <Type>Additional Appliance</Type>
+        </Consignment>
+      </Consignments>
+      <Consignor>
+        <Address>
+          <BuildingName>Mifa Industrial Park</BuildingName>
+          <City>Midrand</City>
+          <MapCode />
+          <Province>Gauteng</Province>
+          <PostalCode>2198</PostalCode>
+          <Street>399 George Street</Street>
+          <StreetNo>399</StreetNo>
+          <SubDivisionNumber />
+          <Suburb>Glen Austin</Suburb>
+          <UnitNo>Unit 18</UnitNo>
+        </Address>
+        <Contacts>
+          <Contact>
+            <Reference></Reference>
+            <Email></Email>
+            <FirstName></FirstName>
+            <LastName></LastName>
+            <Mobile></Mobile>
+            <Work></Work>
+            <Department></Department>
+            <Position></Position>
+            <ComEmail></ComEmail>
+            <ComSms></ComSms>
+          </Contact>
+        </Contacts>
+        <Name>Teljoy</Name>
+        <LegalName>Filmfun Holdings (Pty) Ltd</LegalName>
+        <Position>
+          <Latitude>-26,173610000</Latitude>
+          <Longitude>28,102320000</Longitude>
+        </Position>
+        <Reference>197100978407</Reference>
+        <VAT>46201113698</VAT>
+      </Consignor>
+      <Consignee>
+        <Address>
+          <BuildingName></BuildingName>
+          <City>Beyerspark</City>
+          <MapCode />
+          <Province>Gauteng</Province>
+          <PostalCode>1459</PostalCode>
+          <Street>12 MC Millan Street</Street>
+          <StreetNo />
+          <SubDivisionNumber />
+          <Suburb>Boksburg</Suburb>
+          <UnitNo></UnitNo>
+        </Address>
+        <Contacts>
+          <Contact>
+            <Reference>9010280571084 </Reference>
+            <Email>email for mariska</Email>
+            <FirstName>Mariska</FirstName>
+            <LastName>Gouws</LastName>
+            <Mobile>0827753117</Mobile>
+            <Work></Work>
+            <Department></Department>
+            <Position></Position>
+            <ComEmail>true</ComEmail>
+            <ComSms>false</ComSms>
+          </Contact>
+        </Contacts>
+        <Mst>to be set by Teljoy but defaulted in Trackmatic to 20min</Mst>
+        <Name>Ms Mariska Gouws</Name>
+        <LegalName></LegalName>
+        <Position>
+          <Latitude>-26.173610000</Latitude>
+          <Longitude>28.102320000</Longitude>
+        </Position>
+        <Reference>114302952</Reference>
+        <VAT></VAT>
+        <consigneeCode>114302952</consigneeCode>
+      </Consignee>
+    </Stop>
+  </Stops>
+</ConsignmentStops>

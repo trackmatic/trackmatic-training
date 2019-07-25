@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5807EB59-18A3-4BCE-8353-7778BCCCE7D2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SerialiserConsoleApp</RootNamespace>
+    <AssemblyName>SerialiserConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Slumber, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Slumber.0.2.4\lib\net45\Slumber.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Trackmatic.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Client.2.1.70-beta\lib\net452\Trackmatic.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Contracts.0.0.4\lib\net452\Trackmatic.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Ddd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Ddd.0.0.22\lib\net452\Trackmatic.Ddd.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Batch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Batch.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Core, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Crm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Crm.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Dashboards, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Dashboards.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Dit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Dit.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Finite, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Finite.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Gatekeeper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Gatekeeper.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Icu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Icu.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Infinity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Infinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Metadata, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Pbx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Pbx.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Planning, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Planning.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Reporting, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Routing, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Team, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Team.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Utility, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Vaya, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Vaya.dll</HintPath>
+    </Reference>
+    <Reference Include="Trackmatic.Rest.Vortex, Version=1.0.57.760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Trackmatic.Rest.Client.1.0.108\lib\net45\Trackmatic.Rest.Vortex.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Consignee.cs" />
+    <Compile Include="Models\Consignment.cs" />
+    <Compile Include="Models\ConsignmentStops.cs" />
+    <Compile Include="Models\Consignor.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\HandlingUnit.cs" />
+    <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Stop.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site\SiteData.cs" />
+    <Compile Include="Transformer\UploadModelTransformer.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CompanyConsignments.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
