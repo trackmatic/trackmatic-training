@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTTLoadRouteActionEntity", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialiserConsoleApp", "SerialiserConsoleApp\SerialiserConsoleApp.csproj", "{5807EB59-18A3-4BCE-8353-7778BCCCE7D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Massfresh", "Massfresh\Massfresh\Massfresh.csproj", "{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,14 @@ Global
 		{5807EB59-18A3-4BCE-8353-7778BCCCE7D2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5807EB59-18A3-4BCE-8353-7778BCCCE7D2}.Release|x86.ActiveCfg = Release|Any CPU
 		{5807EB59-18A3-4BCE-8353-7778BCCCE7D2}.Release|x86.Build.0 = Release|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Debug|x86.Build.0 = Debug|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Release|x86.ActiveCfg = Release|Any CPU
+		{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
