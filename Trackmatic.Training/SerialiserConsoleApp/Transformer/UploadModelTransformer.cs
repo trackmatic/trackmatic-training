@@ -114,6 +114,7 @@ namespace SerialiserConsoleApp.Transformer
                 Pickups = new List<PickupData>()
                 {
                     new PickupData()
+
                     {
                         EntityContactIntegrationKeys = _entityContactIntegrationKeys,
                         Reference = Utils.RemoveIllegalChars(consignment.Reference),

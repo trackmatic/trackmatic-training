@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SerialiserConsoleApp.Site
+﻿namespace SerialiserConsoleApp.Site
 {
     public class SiteData
     {
