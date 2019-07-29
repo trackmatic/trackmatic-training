@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTTLoadRouteActionEntity", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialiserConsoleApp", "SerialiserConsoleApp\SerialiserConsoleApp.csproj", "{5807EB59-18A3-4BCE-8353-7778BCCCE7D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Massfresh", "Massfresh\Massfresh.csproj", "{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialiserMassfresh", "Massfresh\SerialiserMassfresh.csproj", "{03CDDDAB-4B68-444F-BB70-DD602AA1BC61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
