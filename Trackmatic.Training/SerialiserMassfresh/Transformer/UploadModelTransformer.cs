@@ -83,7 +83,8 @@ namespace Massfresh.Transformer
                         InternalReference = consignment.ReferenceInternal,
                         Requirements = CreateRequirementData(),
                         Dimensions = CreateDimensionData(consignment),
-                        Financial = CreateFinancialData(consignment)
+                        Financial = CreateFinancialData(consignment),
+                        HandlingUnits = CreateHandlingUnitData(consignment)
                     }
                 },
                 Dropoffs = new List<DropoffData>() { }
@@ -95,7 +96,7 @@ namespace Massfresh.Transformer
             return new ConsignmentData
             {
                 IntegrationKey = consignment.Reference,
-                Reference = _stop.Consignee.Reference,
+                Reference = consignment.Reference,
                 CargoType = CargoTypeData.Freight,
                 ConsignorEntityIntegrationKey = _stop.Consignor.Reference,
                 ConsigneeEntityIntegrationKey = _stop.Consignee.Reference,
@@ -108,7 +109,7 @@ namespace Massfresh.Transformer
                         EntityIntegrationKey = _stop.Consignee.Reference,
                         ShippingAddressIntegrationKey = _stop.Consignee.Reference,
                         EntityContactIntegrationKeys = _entityContactIntegrationKeys,
-                        MaximumServiceTime = TimeSpan.FromMinutes(Convert.ToDouble(_stop.Consignee.MST)),
+                        MaximumServiceTime = TimeSpan.FromMinutes(_stop.Consignee.MST),
                         ExpectedCompletionDate = consignment.DueAtDateTime.ToUniversalTime(),
                         SpecialInstructions = consignment.SpecialInstructions,
                         TimerType = "Up",
@@ -116,12 +117,48 @@ namespace Massfresh.Transformer
                         InternalReference = consignment.ReferenceInternal,
                         Requirements = CreateRequirementData(),
                         Dimensions = CreateDimensionData(consignment),
-                        Financial = CreateFinancialData(consignment)
+                        Financial = CreateFinancialData(consignment),
+                        HandlingUnits = CreateHandlingUnitData(consignment)
                     }
                 },
                 Pickups = new List<PickupData>() { }
             };
         }
+
+        private List<HandlingUnitData> CreateHandlingUnitData(Consignment consignment)
+        {
+            var handlingUnits = new List<HandlingUnitData>();
+            foreach (var handlingUnit in consignment.HandlingUnits)
+            {
+                handlingUnits.Add(new HandlingUnitData
+                {
+                    IntegrationKey = handlingUnit.Reference,
+                    Reference = handlingUnit.Reference,
+                    Description = handlingUnit.Description,
+                    Barcode = handlingUnit.Barcode,
+                    CustomerReference = handlingUnit.Reference,
+                    Financial = new FinancialData
+                    {
+                        AmountExcl = Convert.ToDecimal(handlingUnit.AmountEx),
+                        AmountIncl = Convert.ToDecimal(handlingUnit.AmountIncl)
+                    },
+                    Dimensions = new DimensionsData
+                    {
+                        Pieces = handlingUnit.Pieces,
+                        Volume = new VolumesData
+                        {
+                            Volume = Convert.ToDecimal(handlingUnit.Volume),
+                            Height = Convert.ToDecimal(handlingUnit.Height),
+                            Width = Convert.ToDecimal(handlingUnit.Width),
+                            Length = Convert.ToDecimal(handlingUnit.Length),
+                        },
+                        Weight = Convert.ToDecimal(handlingUnit.Weight)
+                    }
+                });
+            }
+            return handlingUnits;
+        }
+
 
         private FinancialData CreateFinancialData(Consignment consignment)
         {
@@ -304,8 +341,7 @@ namespace Massfresh.Transformer
                 Work = contact.Work,
                 Department = contact.Department,
                 Email = contact.Email,
-                IsAdhoc = false,
-                // TO DO - ask J about comms_preferences model.
+                IsAdhoc = false
             };
         }
         #endregion
