@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Massfresh.Models;
+using Massfresh.Site;
+using System;
 using System.Collections.Generic;
 using Trackmatic.Client.Routes.Integration.Data;
 using Trackmatic.Client.Routes.Integration.Data.Requirements;
 using Trackmatic.Ddd;
-using Massfresh.Models;
-using Massfresh.Site;
 
 namespace Massfresh.Transformer
 {
@@ -137,26 +137,20 @@ namespace Massfresh.Transformer
                     Description = handlingUnit.Description,
                     Barcode = handlingUnit.Barcode,
                     CustomerReference = handlingUnit.Reference,
-                    Financial = new FinancialData
-                    {
-                        AmountExcl = Convert.ToDecimal(handlingUnit.AmountEx),
-                        AmountIncl = Convert.ToDecimal(handlingUnit.AmountIncl)
-                    },
-                    Dimensions = new DimensionsData
-                    {
-                        Pieces = handlingUnit.Pieces,
-                        Volume = new VolumesData
-                        {
-                            Volume = Convert.ToDecimal(handlingUnit.Volume),
-                            Height = Convert.ToDecimal(handlingUnit.Height),
-                            Width = Convert.ToDecimal(handlingUnit.Width),
-                            Length = Convert.ToDecimal(handlingUnit.Length),
-                        },
-                        Weight = Convert.ToDecimal(handlingUnit.Weight)
-                    }
+                    Financial = CreateFinancialData(handlingUnit),
+                    Dimensions = CreateDimensionData(handlingUnit)
                 });
             }
             return handlingUnits;
+        }
+
+        private FinancialData CreateFinancialData(HandlingUnit handlingUnit)
+        {
+            return new FinancialData
+            {
+                AmountExcl = Convert.ToDecimal(handlingUnit.AmountEx),
+                AmountIncl = Convert.ToDecimal(handlingUnit.AmountIncl)
+            };
         }
 
 
@@ -166,6 +160,22 @@ namespace Massfresh.Transformer
             {
                 AmountExcl = Convert.ToDecimal(consignment.AmountEx),
                 AmountIncl = Convert.ToDecimal(consignment.AmountIncl)
+            };
+        }
+
+        private DimensionsData CreateDimensionData(HandlingUnit handlingUnit)
+        {
+            return new DimensionsData
+            {
+                Pieces = handlingUnit.Pieces,
+                Volume = new VolumesData()
+                {
+                    Volume = Convert.ToDecimal(handlingUnit.Volume),
+                    Height = Convert.ToDecimal(handlingUnit.Height),
+                    Width = Convert.ToDecimal(handlingUnit.Width),
+                    Length = Convert.ToDecimal(handlingUnit.Length),
+                },
+                Weight = Convert.ToDecimal(handlingUnit.Weight)
             };
         }
 
@@ -187,22 +197,22 @@ namespace Massfresh.Transformer
         {
             return new RequirementsData
             {
-                SuccessSequence = new List<string> { "SOG", "AD" },
-                FailureSequence = new List<string> { "SOG", "AD" },
-                Signatures = new List<SignatureData>
-                {
-                    new SignatureData
-                    {
-                        IntegrationKey = "SOG",
-                        Label = "Sign on Glass",
-                    }
-                },
+                SuccessSequence = new List<string> { "AD", "SOG" },
+                FailureSequence = new List<string> { "AD", "SOG" },
                 ActionDebriefs = new List<ActionDebriefData>
                 {
                     new ActionDebriefData
                     {
                         IntegrationKey = "AD",
                         Label = "Action Debrief"
+                    }
+                },
+                Signatures = new List<SignatureData>
+                {
+                    new SignatureData
+                    {
+                        IntegrationKey = "SOG",
+                        Label = "Sign on Glass",
                     }
                 }
             };
@@ -286,10 +296,6 @@ namespace Massfresh.Transformer
                 Type = LocationTypeData.Radius,
                 Entrance = new double[] { lon, lat },
                 Name = _stop.Consignee.Name,
-                Markers = new List<double[]>()
-                {
-                    new double[] { lon, lat },
-                },
                 Marker = new double[] { lon, lat },
                 Size = 100,
                 IsAdhoc = false
@@ -306,10 +312,6 @@ namespace Massfresh.Transformer
                 Type = LocationTypeData.Radius,
                 Entrance = new double[] { lon, lat },
                 Name = _stop.Consignor.Name,
-                Markers = new List<double[]>()
-                {
-                    new double[] { lon, lat },
-                },
                 Marker = new double[] { lon, lat },
                 Size = 100,
                 IsAdhoc = false
