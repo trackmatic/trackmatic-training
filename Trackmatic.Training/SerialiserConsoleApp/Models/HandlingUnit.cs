@@ -2,7 +2,7 @@
 
 namespace SerialiserConsoleApp.Models
 {
-    [DataContract(Name = "HandlingUnit", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Template")]
+    [DataContract(Name = "HandlingUnit", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Teljoy")]
     public class HandlingUnit
     {
         [DataMember(Order = 1)]
@@ -14,22 +14,23 @@ namespace SerialiserConsoleApp.Models
         [DataMember(Order = 4)]
         public string Description { get; set; }
         [DataMember(Order = 5)]
-        public string Height { get; set; }
+        public double Height { get; set; }
         [DataMember(Order = 6)]
-        public string Length { get; set; }
+        public double Length { get; set; }
         [DataMember(Order = 7)]
-        public string Pieces { get; set; }
+        public int Pieces { get; set; }
         [DataMember(Order = 8)]
-        public string Volume { get; set; }
+        public double Volume { get; set; }
         [DataMember(Order = 9)]
-        public string Width { get; set; }
+        public double Width { get; set; }
         [DataMember(Order = 10)]
-        public string Weight { get; set; }
+        public double Weight { get; set; }
         [DataMember(Order = 11)]
-        public string AmountEx { get; set; }
+        public double AmountEx { get; set; }
         [DataMember(Order = 12)]
-        public string AmountIncl { get; set; }
+        public double AmountIncl { get; set; }
         [DataMember(Order = 13)]
-        public string Discount { get; set; }
+        public int Discount { get; set; }
+        public string Model { get; set; }
     }
 }

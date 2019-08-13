@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace SerialiserConsoleApp.Models
 {
-    [DataContract(Name = "Consignee", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Template")]
+    [DataContract(Name = "Consignee", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Teljoy")]
     public class Consignee
     {
         [DataMember(Order = 1)]
@@ -11,7 +11,7 @@ namespace SerialiserConsoleApp.Models
         [DataMember(Order = 2)]
         public List<Contact> Contacts { get; set; }
         [DataMember(Order = 3)]
-        public string MST { get; set; }
+        public int MST { get; set; }
         [DataMember(Order = 4)]
         public string Name { get; set; }
         [DataMember(Order = 5)]

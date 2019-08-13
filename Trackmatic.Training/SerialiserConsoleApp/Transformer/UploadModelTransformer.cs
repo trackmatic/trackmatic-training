@@ -97,7 +97,14 @@ namespace SerialiserConsoleApp.Transformer
             var data = new List<ConsignmentData>();
             foreach (var consignment in _stop.Consignments)
             {
-                   data.Add(CreateDropOffData(consignment));
+                if (consignment.Nature == "Collection")
+                {
+                    data.Add(CreatePickupData(consignment));
+                }
+                else
+                {
+                    data.Add(CreateDropOffData(consignment));
+                }
             }
             return data;
         }
@@ -109,7 +116,7 @@ namespace SerialiserConsoleApp.Transformer
                 IntegrationKey = Utils.RemoveIllegalChars(consignment.Reference),
                 Reference = Utils.RemoveIllegalChars(consignment.Reference),
                 ConsigneeEntityIntegrationKey = _stop.Consignee.Reference,
-                ConsignorEntityIntegrationKey = _stop.Consignor.Reference,
+                ConsignorEntityIntegrationKey = "Teljoy",
                 AccessGroups = new List<string>(),
                 Pickups = new List<PickupData>()
                 {
@@ -137,12 +144,12 @@ namespace SerialiserConsoleApp.Transformer
                         {
                             Volume = new VolumesData()
                             {
-                                Volume = Utils.CheckDecimalEmpty(consignment.Volume)
+                                Volume = (decimal)consignment.Volume
                             },
-                            VolumetricMass = Utils.CheckDecimalEmpty(consignment.Volume),
-                            Pieces = Utils.CheckIntEmpty(consignment.Pieces),
-                            Pallets = Convert.ToDecimal(consignment.Pallets),
-                            Weight = Utils.CheckDecimalEmpty(consignment.Weight)
+                            VolumetricMass = (decimal)consignment.Volume,
+                            Pieces = consignment.Pieces,
+                            Pallets = (decimal)consignment.Pallets,
+                            Weight = (decimal)consignment.Weight
                         },
 
                         Requirements = new RequirementsData()
@@ -222,7 +229,7 @@ namespace SerialiserConsoleApp.Transformer
                 IntegrationKey = Utils.RemoveIllegalChars(consignment.Reference),
                 Reference = Utils.RemoveIllegalChars(consignment.Reference),
                 ConsigneeEntityIntegrationKey = _stop.Consignee.Reference,
-                ConsignorEntityIntegrationKey = _stop.Consignor.Reference,
+                ConsignorEntityIntegrationKey = "Teljoy",
                 AccessGroups = new List<string>(),
                 Dropoffs = new List<DropoffData>()
                 {
@@ -249,12 +256,12 @@ namespace SerialiserConsoleApp.Transformer
                         {
                                 Volume = new VolumesData()
                                 {
-                                    Volume = Utils.CheckDecimalEmpty(consignment.Volume)
+                                    Volume = (decimal)consignment.Volume
                                 },
-                                VolumetricMass = Utils.CheckDecimalEmpty(consignment.Volume),
-                                Pieces = Utils.CheckIntEmpty(consignment.Pieces),
+                                VolumetricMass = (decimal)consignment.Volume,
+                                Pieces = (int)consignment.Pieces,
                                 Pallets = Convert.ToDecimal(consignment.Pallets),
-                                Weight = Utils.CheckDecimalEmpty(consignment.Weight)
+                                Weight = (decimal)consignment.Weight
                         },
                         Requirements = new RequirementsData()
                         {
@@ -331,8 +338,10 @@ namespace SerialiserConsoleApp.Transformer
                     IntegrationKey = handlingUnit.Barcode,
                     Barcode = handlingUnit.Barcode,
                     Reference = handlingUnit.Reference,
-                    CustomerReference = _stop.Consignor.Reference,
                     Description = handlingUnit.Description,
+                    Code = handlingUnit.Code,
+                    Model = handlingUnit.Model,
+                    
                     Financial = new FinancialData()
                     {
                         AmountExcl = Convert.ToDecimal(handlingUnit.AmountEx),
@@ -373,7 +382,7 @@ namespace SerialiserConsoleApp.Transformer
             {
                 IntegrationKey = _stop.Consignee.Reference,
                 Name = _stop.Consignee.Name,
-                IsAdhoc = false,
+                IsAdhoc = true,
                 Reference = _stop.Consignee.Reference
             };
             return consignee;
@@ -383,10 +392,10 @@ namespace SerialiserConsoleApp.Transformer
         {
             var consignor = new EntityData()
             {
-                IntegrationKey = _stop.Consignor.Reference,
-                Name = _stop.Consignor.Name,
-                IsAdhoc = false,
-                Reference = _stop.Consignor.Reference
+                IntegrationKey = $"Teljoy",
+                Name = $"Teljoy",
+                IsAdhoc = true,
+                Reference = $"Teljoy"
             };
             return consignor;
         }
@@ -438,7 +447,7 @@ namespace SerialiserConsoleApp.Transformer
             var consignee = new LocationData()
             {
                 IntegrationKey = _stop.Consignee.Reference,
-                IsAdhoc = false,
+                IsAdhoc = true,
                 Reference = _stop.Consignee.Reference,
                 Name = _stop.Consignee.Name,
                 Entrance = new double[] { lon, lat },
@@ -456,8 +465,8 @@ namespace SerialiserConsoleApp.Transformer
         {
             var consignor = new LocationData()
             {
-                IntegrationKey = _stop.Consignor.Reference,
-                Reference = _stop.Consignor.Reference,
+                IntegrationKey = "Teljoy",
+                Reference = "Teljoy",
                 Name = _stop.Consignor.Name,
                 Entrance = new double[] { 0, 0 },
                 Type = LocationTypeData.Radius,
@@ -484,7 +493,7 @@ namespace SerialiserConsoleApp.Transformer
             {
                 IntegrationKey = _stop.Consignee.Reference,
                 LocationIntegrationKey = _stop.Consignee.Reference,
-                IsAdhoc = false,
+                IsAdhoc = true,
                 Name = _stop.Consignee.Name,
                 Reference = _stop.Consignee.Reference,
                 BuildingName = _stop.Consignee.Address.BuildingName,

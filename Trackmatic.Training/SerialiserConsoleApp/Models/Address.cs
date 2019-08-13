@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace SerialiserConsoleApp.Models
 {
-    [DataContract(Name = "Address", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Template")]
+    [DataContract(Name = "Address", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Teljoy")]
     public class Address
     {
         [DataMember(Order = 1)]

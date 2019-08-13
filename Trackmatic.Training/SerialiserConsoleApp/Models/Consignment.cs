@@ -4,13 +4,13 @@ using System.Runtime.Serialization;
 
 namespace SerialiserConsoleApp.Models
 {
-    [DataContract(Name = "Consignment", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Template")]
+    [DataContract(Name = "Consignment", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Teljoy")]
     public class Consignment
     {
         [DataMember(Order = 1)]
-        public string AmountEx { get; set; }
+        public double AmountEx { get; set; }
         [DataMember(Order = 2)]
-        public string AmountInc { get; set; }
+        public double AmountInc { get; set; }
         [DataMember(Order = 3)]
         public DateTime DueAtDateTime { get; set; }
         [DataMember(Order = 4)]
@@ -30,19 +30,19 @@ namespace SerialiserConsoleApp.Models
         [DataMember(Order = 11)]
         public string SpecialInstructions { get; set; }
         [DataMember(Order = 12)]
-        public string Pieces { get; set; }
+        public int Pieces { get; set; }
         [DataMember(Order = 13)]
-        public string Width { get; set; }
+        public double Width { get; set; }
         [DataMember(Order = 14)]
-        public string Height { get; set; }
+        public double Height { get; set; }
         [DataMember(Order = 15)]
-        public string Length { get; set; }
+        public double Length { get; set; }
         [DataMember(Order = 16)]
-        public string Pallets { get; set; }
+        public double Pallets { get; set; }
         [DataMember(Order = 17)]
-        public string Volume { get; set; }
+        public double Volume { get; set; }
         [DataMember(Order = 18)]
-        public string Weight { get; set; }
+        public double Weight { get; set; }
         [DataMember(Order = 19)]
         public string CommodityType { get; set; }
         [DataMember(Order = 20)]

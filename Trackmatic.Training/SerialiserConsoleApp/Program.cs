@@ -6,6 +6,7 @@ using Trackmatic.Client.Routes.Integration.Data;
 using SerialiserConsoleApp.Models;
 using SerialiserConsoleApp.Transformer;
 using SerialiserConsoleApp.Site;
+using System.Xml.Serialization;
 
 namespace SerialiserConsoleApp
 {
@@ -13,9 +14,19 @@ namespace SerialiserConsoleApp
     {
         static void Main(string[] args)
         {
-            string FileName = "CompanyConsignments.xml";
+            //var tramsformer = new CsvToModelTransformer().Transform("Trackmatic XML Test Cases.txt");
+            //SerializeToXml<ConsignmentStops>("TeljoyTestCases", "c:/temp", tramsformer);
+            string FileName = "TeljoyTestCases.xml";
 
             SerialiseAndTransform(FileName);
+        }
+        public static void SerializeToXml<T>(string filename, string path, T collection)
+        {
+            var xmlSerializer = new XmlSerializer(typeof(T));
+            using (var stream = new FileStream($"{path}/{filename}.xml", FileMode.Create))
+            {
+                xmlSerializer.Serialize(stream, collection);
+            }
         }
 
         private static void SerialiseAndTransform(string fileName)
@@ -39,7 +50,6 @@ namespace SerialiserConsoleApp
 
                 SubmitRecord(integration, uploadModel);
             }
-            Console.ReadKey();
         }
 
         private static void SubmitRecord(Trackmatic.Client.Routes.Integration.IIntegration integration, UploadRouteConsignmentsData uploadModel)

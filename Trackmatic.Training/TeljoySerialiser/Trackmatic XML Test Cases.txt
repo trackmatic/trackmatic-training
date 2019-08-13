@@ -1,0 +1,3 @@
+ID	Cusno	Customer Name	Cell Number	Address	Lattitude	Longitude	DocNr	ProdCode	Description	SerialNr	MovementType	ActionDate	Delivery Instructions					
+200782372	0069981	Mrs Ianthea Banks	0738600544	"37 11th Avenue, hiughton, Johannesburg, 2198"	-26.155460000	28.063580000	D/652/46980	NSWMDEFYWTL1301M	Defy 13kg Metallic Top Loader Washing Machine	8880613600151006321101	Collection	2019-07-30	please call customer before del 0738600544			
+200782378	160030212	Mr Hassan Adam	0825360233	"161 colorado circle, bayview, durban, 4092"	-29.922991600	30.909209400	I/652/101077	NS-TDDEFYDTD259	Defy 5kg Metallic Tumble Dryer	dtd2591810078506	Installation	2019-07-30									

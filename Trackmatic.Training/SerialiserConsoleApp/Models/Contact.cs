@@ -2,7 +2,7 @@
 
 namespace SerialiserConsoleApp.Models
 {
-    [DataContract(Name = "Contact", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Template")]
+    [DataContract(Name = "Contact", Namespace = "http://wwww.trackmatic.co.za/schema/Integration/Teljoy")]
     public class Contact
     {
         [DataMember(Order = 1)]
@@ -22,8 +22,8 @@ namespace SerialiserConsoleApp.Models
         [DataMember(Order = 8)]
         public string Position { get; set; }
         [DataMember(Order = 9)]
-        public string ComEmail { get; set; } // Set to bool.
+        public bool ComEmail { get; set; } // Set to bool.
         [DataMember(Order = 10)]
-        public string ComSms { get; set; } // Set to bool.
+        public bool ComSms { get; set; } // Set to bool.
     }
 }

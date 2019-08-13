@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Trackmatic.Client.Routes.Integration.Data;
 using Trackmatic.Client.Routes.Integration.Data.Requirements;
-using Trackmatic.Ddd;
 using Massfresh.Models;
 using Massfresh.Site;
 
@@ -286,10 +285,6 @@ namespace Massfresh.Transformer
                 Type = LocationTypeData.Radius,
                 Entrance = new double[] { lon, lat },
                 Name = _stop.Consignee.Name,
-                Markers = new List<double[]>()
-                {
-                    new double[] { lon, lat },
-                },
                 Marker = new double[] { lon, lat },
                 Size = 100,
                 IsAdhoc = false
@@ -334,7 +329,7 @@ namespace Massfresh.Transformer
         {
             return new EntityContactData()
             {
-                IntegrationKey = IdentityGenerator.NewTinySequentialId(),
+                IntegrationKey = "",//IdentityGenerator.NewTinySequentialId(),
                 FirstName = contact.FirstName,
                 LastName = contact.LastName,
                 Mobile = contact.Mobile,
