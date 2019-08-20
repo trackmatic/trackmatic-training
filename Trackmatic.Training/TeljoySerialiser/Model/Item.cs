@@ -14,6 +14,7 @@ namespace TeljoySerialiser.Model
         public string Longitude { get; set; }
         public string DocNr { get; set; }
         public string ProdCode { get; set; }
+        public string Model { get; set; }
         public string Description { get; set; }
         public string SerialNr { get; set; }
         public string MovementType { get; set; }

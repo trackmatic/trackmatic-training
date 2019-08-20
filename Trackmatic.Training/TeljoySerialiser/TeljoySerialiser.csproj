@@ -94,7 +94,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Trackmatic XML Test Cases.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

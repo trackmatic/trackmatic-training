@@ -157,7 +157,7 @@ namespace TeljoySerialiser.Transformer
 
                         Requirements = new RequirementsData()
                         {
-                            SuccessSequence = new List<string> { "odometer", "HUD", "signature", "image", "servicerating" },
+                            SuccessSequence = new List<string> { "odometer", "actiondebrief", "signature", "image", "servicerating" },
                             FailureSequence = new List<string> { "odometer", "image" },
                             OdometerReadings = new List<OdometerReadingData>
                             {
@@ -172,23 +172,23 @@ namespace TeljoySerialiser.Transformer
                                     AutoPopulateAsset = false
                                 }
                             },
-                            HandlingUnitDebriefs = new List<HandlingUnitDebriefData>
-                            {
-                                new HandlingUnitDebriefData
-                                {
-                                    IntegrationKey = "HUD",
-                                    Label = "Handling unit Debrief"
-                                }
-                            },
-                            //ActionDebriefs = new List<ActionDebriefData>
+                            //HandlingUnitDebriefs = new List<HandlingUnitDebriefData>
                             //{
-                            //    new ActionDebriefData
+                            //    new HandlingUnitDebriefData
                             //    {
-                            //        IntegrationKey = "actiondebrief",
-                            //        Label ="Action Debrief",
-                            //        AllowPartialFailure = true
+                            //        IntegrationKey = "HUD",
+                            //        Label = "Handling unit Debrief"
                             //    }
                             //},
+                            ActionDebriefs = new List<ActionDebriefData>
+                            {
+                                new ActionDebriefData
+                                {
+                                    IntegrationKey = "actiondebrief",
+                                    Label ="Action Debrief",
+                                    AllowPartialFailure = true
+                                }
+                            },
                             Signatures = new List<SignatureData>
                             {
                                 new SignatureData
@@ -277,7 +277,7 @@ namespace TeljoySerialiser.Transformer
                         },
                         Requirements = new RequirementsData()
                         {
-                            SuccessSequence = new List<string> { "odometer", "HUD", "signature", "image", "servicerating" },
+                            SuccessSequence = new List<string> { "odometer", "actiondebrief", "signature", "image", "servicerating" },
                             FailureSequence = new List<string>{ "odometer", "image"},
                             OdometerReadings = new List<OdometerReadingData>
                             {
@@ -292,23 +292,23 @@ namespace TeljoySerialiser.Transformer
                                     AutoPopulateAsset = false
                                 }
                             },
-                            HandlingUnitDebriefs = new List<HandlingUnitDebriefData>
-                            {
-                                new HandlingUnitDebriefData
-                                {
-                                    IntegrationKey = "HUD",
-                                    Label = "Handling unit Debrief"
-                                }
-                            },
-                            //ActionDebriefs = new List<ActionDebriefData>
+                            //HandlingUnitDebriefs = new List<HandlingUnitDebriefData>
                             //{
-                            //    new ActionDebriefData
+                            //    new HandlingUnitDebriefData
                             //    {
-                            //        IntegrationKey = "actiondebrief",
-                            //        Label = "Action Debrief",
-                            //        AllowPartialFailure = true
+                            //        IntegrationKey = "HUD",
+                            //        Label = "Handling unit Debrief"
                             //    }
                             //},
+                            ActionDebriefs = new List<ActionDebriefData>
+                            {
+                                new ActionDebriefData
+                                {
+                                    IntegrationKey = "actiondebrief",
+                                    Label = "Action Debrief",
+                                    AllowPartialFailure = true
+                                }
+                            },
                             Signatures = new List<SignatureData>()
                             {
                                 new SignatureData()
@@ -355,7 +355,7 @@ namespace TeljoySerialiser.Transformer
             {
                 handlingUnitData.Add(new HandlingUnitData()
                 {
-                    IntegrationKey = Utils.RemoveIllegalChars(handlingUnit.Barcode).Replace(" ", "_"),
+                    IntegrationKey = !handlingUnit.Equals("")? Utils.RemoveIllegalChars(handlingUnit.Barcode).Replace(" ", "_") : Utils.RemoveIllegalChars(handlingUnit.InternalReference).Replace(" ", "_"),
                     Barcode = handlingUnit.Barcode,
                     Reference = handlingUnit.InternalReference,
                     Description = handlingUnit.Description,

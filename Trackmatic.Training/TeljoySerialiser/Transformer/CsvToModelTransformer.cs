@@ -29,11 +29,12 @@ namespace TeljoySerialiser.Transformer
                         Longitude = line.Split('\t')[6],
                         DocNr = line.Split('\t')[7],
                         ProdCode = line.Split('\t')[8],
-                        Description = line.Split('\t')[9],
-                        SerialNr = line.Split('\t')[10],
-                        MovementType = line.Split('\t')[11],
-                        ActionDate = line.Split('\t')[12],
-                        DeliveryInstructions = line.Split('\t')[13]
+                        Model = line.Split('\t')[9],
+                        Description = line.Split('\t')[10],
+                        SerialNr = line.Split('\t')[11],
+                        MovementType = line.Split('\t')[12],
+                        ActionDate = line.Split('\t')[13],
+                        DeliveryInstructions = line.Split('\t')[14]
                     }
                     );
             }
@@ -41,9 +42,9 @@ namespace TeljoySerialiser.Transformer
         }
         private Stops Translate(List<Item> Items)
         {
-            var file = File.ReadAllLines("Models.csv");
-            var modelDIctionary = new Dictionary<string, string>();
-            file.ToList().ForEach(x => modelDIctionary.Add(x.Split(',')[0], x.Split(',')[1]));
+            //var file = File.ReadAllLines("Models.csv");
+            //var modelDIctionary = new Dictionary<string, string>();
+            //file.ToList().ForEach(x => modelDIctionary.Add(x.Split(',')[0], x.Split(',')[1]));
             Items.RemoveAt(0);
             var consignmentStops = new Stops()
             {
@@ -117,7 +118,7 @@ namespace TeljoySerialiser.Transformer
                             IsSpecified = "false",
                             Barcode = x.SerialNr,
                             ProductCode = x.ProdCode,
-                            ProductModel = modelDIctionary.First(y=> y.Key.Equals(x.SerialNr, System.StringComparison.InvariantCultureIgnoreCase)).Value,
+                            ProductModel = x.Model,/*modelDIctionary.First(y=> y.Key.Equals(x.SerialNr, System.StringComparison.InvariantCultureIgnoreCase)).Value,*/
                             Description = x.Description,
                             InternalReference = x.Id,
                             Properties = new Properties

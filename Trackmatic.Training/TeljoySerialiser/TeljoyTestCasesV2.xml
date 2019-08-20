@@ -1,24 +1,49 @@
 ﻿<?xml version="1.0"?>
-<Stops xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wwww.trackmatic.co.za/schema/Integration/Teljoy">
+<Stops  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wwww.trackmatic.co.za/schema/Integration/Teljoy">
   <SiteReference>516</SiteReference>
   <SiteName>Teljoy Midrand</SiteName>
   <Consignees>
     <Consignee>
-      <Id>0069981</Id>
-      <Name>Mrs Ianthea Banks</Name>
+      <Id>114600193</Id>
+      <Name>Mr W Grobler</Name>
       <Address>
-        <StreetName>"37 11th Avenue</StreetName>
-        <Suburb> hiughton</Suburb>
+        <StreetName>7 Amanda Ave</StreetName>
+        <Suburb> Lea Glen</Suburb>
+        <City> florida</City>
+        <Latitude>27.91795</Latitude>
+        <Longitude>-26.1938</Longitude>
+      </Address>
+      <Contacts>
+        <Contact>
+          <Reference>114600193</Reference>
+          <FirstName>W</FirstName>
+          <LastName>Grobler</LastName>
+          <Mobile>0842629550</Mobile>
+          <ComEmail>false</ComEmail>
+          <ComSms>false</ComSms>
+        </Contact>
+      </Contacts>
+      <FixedMst>10</FixedMst>
+      <VariableMSt>10</VariableMSt>
+      <IsAdHoc>true</IsAdHoc>
+      <Sequence>0</Sequence>
+    </Consignee>
+    <Consignee>
+      <Id>160015023</Id>
+      <Name>Mr N Rammishwar</Name>
+      <Address>
+        <StreetName>25 Arun Str</StreetName>
+        <Suburb> Riverlea</Suburb>
         <City> Johannesburg</City>
-        <Latitude>28.06358</Latitude>
-        <Longitude>-26.15546</Longitude>
+        <Latitude>27.976017</Latitude>
+        <Longitude>-26.2103344</Longitude>
       </Address>
       <Contacts>
         <Contact>
-          <Reference>0069981</Reference>
-          <FirstName>Ianthea</FirstName>
-          <LastName>Banks</LastName>
-          <Mobile>0738600544</Mobile>
+          <Reference>160015023</Reference>
+          <FirstName>N</FirstName>
+          <LastName>Rammishwar</LastName>
+          <Mobile>0832978646</Mobile>
           <ComEmail>false</ComEmail>
           <ComSms>false</ComSms>
         </Contact>
@@ -29,21 +54,21 @@
       <Sequence>0</Sequence>
     </Consignee>
     <Consignee>
-      <Id>160006200</Id>
-      <Name>Jacobus Fredericks</Name>
+      <Id>160016450</Id>
+      <Name>Mrs A Kruger</Name>
       <Address>
-        <StreetName>"40 Peter Place</StreetName>
-        <Suburb> Bryanston</Suburb>
-        <City> Johannesburg"</City>
-        <Latitude>28.01817</Latitude>
-        <Longitude>-26.08223</Longitude>
+        <StreetName>225 Tuin Str</StreetName>
+        <Suburb> Hercules</Suburb>
+        <City> Pretoria West</City>
+        <Latitude>28.139788</Latitude>
+        <Longitude>-25.725587</Longitude>
       </Address>
       <Contacts>
         <Contact>
-          <Reference>160006200</Reference>
-          <FirstName>Jacobus</FirstName>
-          <LastName>Fredericks</LastName>
-          <Mobile>0832568800</Mobile>
+          <Reference>160016450</Reference>
+          <FirstName>A</FirstName>
+          <LastName>Kruger</LastName>
+          <Mobile>0829239940</Mobile>
           <ComEmail>false</ComEmail>
           <ComSms>false</ComSms>
         </Contact>
@@ -54,21 +79,21 @@
       <Sequence>0</Sequence>
     </Consignee>
     <Consignee>
-      <Id>160015188</Id>
-      <Name>Mrs Christo Botha</Name>
+      <Id>160024160</Id>
+      <Name>Mr W Robertson</Name>
       <Address>
-        <StreetName>"12 Piarco Ave</StreetName>
-        <Suburb> Bonareo Park</Suburb>
-        <City> Kempton Park</City>
-        <Latitude>28.255586</Latitude>
-        <Longitude>-26.1239939</Longitude>
+        <StreetName>16 Amarja Complex</StreetName>
+        <Suburb> 38 Suikerbekkie Street</Suburb>
+        <City> Bromhof</City>
+        <Latitude>27.964831</Latitude>
+        <Longitude>-26.0797418</Longitude>
       </Address>
       <Contacts>
         <Contact>
-          <Reference>160015188</Reference>
-          <FirstName>Christo</FirstName>
-          <LastName>Botha</LastName>
-          <Mobile>0837056222</Mobile>
+          <Reference>160024160</Reference>
+          <FirstName>W</FirstName>
+          <LastName>Robertson</LastName>
+          <Mobile>0828936581</Mobile>
           <ComEmail>false</ComEmail>
           <ComSms>false</ComSms>
         </Contact>
@@ -79,21 +104,21 @@
       <Sequence>0</Sequence>
     </Consignee>
     <Consignee>
-      <Id>160021665</Id>
-      <Name>Mr Jacques Landsberg</Name>
+      <Id>160022291</Id>
+      <Name>Mr J Du Buisson</Name>
       <Address>
-        <StreetName>"99a Lang Str</StreetName>
-        <Suburb> Rosettenville</Suburb>
-        <City> Johannesburg</City>
-        <Latitude>28.0594323</Latitude>
-        <Longitude>-26.251555</Longitude>
+        <StreetName>13 Lotus str</StreetName>
+        <Suburb> Edelweiss</Suburb>
+        <City> Springs</City>
+        <Latitude>28.46867</Latitude>
+        <Longitude>-26.28873</Longitude>
       </Address>
       <Contacts>
         <Contact>
-          <Reference>160021665</Reference>
-          <FirstName>Jacques</FirstName>
-          <LastName>Landsberg</LastName>
-          <Mobile>0823095692</Mobile>
+          <Reference>160022291</Reference>
+          <FirstName>J</FirstName>
+          <LastName>Buisson</LastName>
+          <Mobile>0844878217</Mobile>
           <ComEmail>false</ComEmail>
           <ComSms>false</ComSms>
         </Contact>
@@ -104,45 +129,20 @@
       <Sequence>0</Sequence>
     </Consignee>
     <Consignee>
-      <Id>160023017</Id>
-      <Name>Mr Leon riaan Jerling</Name>
+      <Id>160023484</Id>
+      <Name>Shain Meiring</Name>
       <Address>
-        <StreetName>"1 Louse str</StreetName>
-        <Suburb> Farramere</Suburb>
-        <City> Benoni</City>
-        <Latitude>28.3023579</Latitude>
-        <Longitude>-26.1681312</Longitude>
+        <StreetName>13 Brown Str</StreetName>
+        <Suburb> Witfiel</Suburb>
+        <City> Boksburg</City>
+        <Latitude>28.2131879</Latitude>
+        <Longitude>-26.1857537</Longitude>
       </Address>
       <Contacts>
         <Contact>
-          <Reference>160023017</Reference>
-          <FirstName>Leon</FirstName>
-          <LastName>Jerling</LastName>
-          <Mobile>0847169385</Mobile>
-          <ComEmail>false</ComEmail>
-          <ComSms>false</ComSms>
-        </Contact>
-      </Contacts>
-      <FixedMst>10</FixedMst>
-      <VariableMSt>10</VariableMSt>
-      <IsAdHoc>true</IsAdHoc>
-      <Sequence>0</Sequence>
-    </Consignee>
-    <Consignee>
-      <Id>160027526</Id>
-      <Name>Mr Mostert Moster</Name>
-      <Address>
-        <StreetName>"2 lafemme</StreetName>
-        <Suburb> Mooinooi</Suburb>
-        <City> Brits</City>
-        <Latitude>27.5583897</Latitude>
-        <Longitude>-25.7538196</Longitude>
-      </Address>
-      <Contacts>
-        <Contact>
-          <Reference>160027526</Reference>
-          <FirstName>Mostert</FirstName>
-          <LastName>Moster</LastName>
+          <Reference>160023484</Reference>
+          <FirstName>Shain</FirstName>
+          <LastName>Meiring</LastName>
           <Mobile>0713632127</Mobile>
           <ComEmail>false</ComEmail>
           <ComSms>false</ComSms>
@@ -154,96 +154,21 @@
       <Sequence>0</Sequence>
     </Consignee>
     <Consignee>
-      <Id>160030204</Id>
-      <Name>Ms Lucille Darty</Name>
+      <Id>3552</Id>
+      <Name>Edward johannes Heuer</Name>
       <Address>
-        <StreetName>"825 Rubenstein Drive</StreetName>
-        <Suburb> Moreletapark</Suburb>
-        <City> Pretoria</City>
-        <Latitude>28.29588</Latitude>
-        <Longitude>-25.814282</Longitude>
+        <StreetName>158 Gawie Theron Avenue</StreetName>
+        <Suburb> Harmiony</Suburb>
+        <City> Virginia</City>
+        <Latitude>26.896023</Latitude>
+        <Longitude>-28.084403</Longitude>
       </Address>
       <Contacts>
         <Contact>
-          <Reference>160030204</Reference>
-          <FirstName>Lucille</FirstName>
-          <LastName>Darty</LastName>
+          <Reference>3552</Reference>
+          <FirstName>Edward</FirstName>
+          <LastName>Heuer</LastName>
           <Mobile>0126547879</Mobile>
-          <ComEmail>false</ComEmail>
-          <ComSms>false</ComSms>
-        </Contact>
-      </Contacts>
-      <FixedMst>10</FixedMst>
-      <VariableMSt>10</VariableMSt>
-      <IsAdHoc>true</IsAdHoc>
-      <Sequence>0</Sequence>
-    </Consignee>
-    <Consignee>
-      <Id>160030211</Id>
-      <Name>Ms Larissa Bekker</Name>
-      <Address>
-        <StreetName>"eagle peak spur</StreetName>
-        <Suburb> shop 36 cnr of memel and allen st</Suburb>
-        <City> Eagle Peak Spur Steak Ranch</City>
-        <Latitude>29.8334364</Latitude>
-        <Longitude>-27.7426302</Longitude>
-      </Address>
-      <Contacts>
-        <Contact>
-          <Reference>160030211</Reference>
-          <FirstName>Larissa</FirstName>
-          <LastName>Bekker</LastName>
-          <Mobile>0782408249</Mobile>
-          <ComEmail>false</ComEmail>
-          <ComSms>false</ComSms>
-        </Contact>
-      </Contacts>
-      <FixedMst>10</FixedMst>
-      <VariableMSt>10</VariableMSt>
-      <IsAdHoc>true</IsAdHoc>
-      <Sequence>0</Sequence>
-    </Consignee>
-    <Consignee>
-      <Id>160030212</Id>
-      <Name>Mr Hassan Adam</Name>
-      <Address>
-        <StreetName>"161 colorado circle</StreetName>
-        <Suburb> bayview</Suburb>
-        <City> durban</City>
-        <Latitude>30.9092094</Latitude>
-        <Longitude>-29.9229916</Longitude>
-      </Address>
-      <Contacts>
-        <Contact>
-          <Reference>160030212</Reference>
-          <FirstName>Hassan</FirstName>
-          <LastName>Adam</LastName>
-          <Mobile>0825360233</Mobile>
-          <ComEmail>false</ComEmail>
-          <ComSms>false</ComSms>
-        </Contact>
-      </Contacts>
-      <FixedMst>10</FixedMst>
-      <VariableMSt>10</VariableMSt>
-      <IsAdHoc>true</IsAdHoc>
-      <Sequence>0</Sequence>
-    </Consignee>
-    <Consignee>
-      <Id>188800153</Id>
-      <Name>Ms Che Alexander</Name>
-      <Address>
-        <StreetName>"Unit 3 C The Bay </StreetName>
-        <Suburb> 275 Kelvin Drive</Suburb>
-        <City> Morningside EXT1235</City>
-        <Latitude>28.067745</Latitude>
-        <Longitude>-26.0712437</Longitude>
-      </Address>
-      <Contacts>
-        <Contact>
-          <Reference>188800153</Reference>
-          <FirstName>Che</FirstName>
-          <LastName>Alexander</LastName>
-          <Mobile>0823216935</Mobile>
           <ComEmail>false</ComEmail>
           <ComSms>false</ComSms>
         </Contact>
@@ -263,16 +188,16 @@
   </Consignors>
   <Actions>
     <Action>
-      <ConsigneeID>0069981</ConsigneeID>
+      <ConsigneeID>114600193</ConsigneeID>
       <ConsignorID>197100978407</ConsignorID>
-      <Type>Pickup</Type>
-      <Nature>Collection</Nature>
-      <ActionId>D/652/46980</ActionId>
-      <ActionReference>D/652/46980</ActionReference>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>I/652/109448</ActionId>
+      <ActionReference>I/652/109448</ActionReference>
       <IsCod>false</IsCod>
-      <SpecialInstructions>please call customer before del 0738600544</SpecialInstructions>
+      <SpecialInstructions />
       <Dates>
-        <DueAt>2019-07-30</DueAt>
+        <DueAt>2019-08-15</DueAt>
       </Dates>
       <Properties>
         <FixedMst>10</FixedMst>
@@ -293,11 +218,11 @@
       <Products>
         <Product>
           <IsSpecified>false</IsSpecified>
-          <Barcode>8880613600151006321101</Barcode>
-          <ProductCode>NSWMDEFYWTL1301M</ProductCode>
-          <ProductModel>WTL1301M</ProductModel>
-          <Description>Defy 13kg Metallic Top Loader Washing Machine</Description>
-          <InternalReference>200782372</InternalReference>
+          <Barcode>1940315M-03815</Barcode>
+          <ProductCode>NSCTVPAN-TH32310</ProductCode>
+          <ProductModel>TH-32F310Q</ProductModel>
+          <Description>Panasonic 32 HD Ready LED TV</Description>
+          <InternalReference>200818604</InternalReference>
           <Properties>
             <FixedMst>0</FixedMst>
             <VariableMSt>0</VariableMSt>
@@ -318,16 +243,126 @@
       </Products>
     </Action>
     <Action>
-      <ConsigneeID>0069981</ConsigneeID>
+      <ConsigneeID>160015023</ConsigneeID>
       <ConsignorID>197100978407</ConsignorID>
-      <Type>Pickup</Type>
-      <Nature>Collection</Nature>
-      <ActionId>D/652/46981</ActionId>
-      <ActionReference>D/652/46981</ActionReference>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>I/652/109349</ActionId>
+      <ActionReference>I/652/109349</ActionReference>
+      <IsCod>false</IsCod>
+      <SpecialInstructions />
+      <Dates>
+        <DueAt>2019-08-15</DueAt>
+      </Dates>
+      <Properties>
+        <FixedMst>10</FixedMst>
+        <VariableMSt>10</VariableMSt>
+        <AmountExcl>0</AmountExcl>
+        <AmountIncl>0</AmountIncl>
+        <Discount>0</Discount>
+        <Pallets>0</Pallets>
+        <Units>0</Units>
+        <Volume>0</Volume>
+        <Weight>0</Weight>
+        <Dimensions>
+          <Height>0</Height>
+          <Length>0</Length>
+          <Width>0</Width>
+        </Dimensions>
+      </Properties>
+      <Products>
+        <Product>
+          <IsSpecified>false</IsSpecified>
+          <Barcode>wo016123+4224</Barcode>
+          <ProductCode>NSBASESW-MADRIDTJ1520</ProductCode>
+          <ProductModel>Madrid TJ 1520</ProductModel>
+          <Description>Lala - Madrid Queen Size Bed (Base)</Description>
+          <InternalReference>200818446</InternalReference>
+          <Properties>
+            <FixedMst>0</FixedMst>
+            <VariableMSt>0</VariableMSt>
+            <AmountExcl>0</AmountExcl>
+            <AmountIncl>0</AmountIncl>
+            <Discount>0</Discount>
+            <Pallets>0</Pallets>
+            <Units>1</Units>
+            <Volume>0</Volume>
+            <Weight>0</Weight>
+            <Dimensions>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Width>0</Width>
+            </Dimensions>
+          </Properties>
+        </Product>
+      </Products>
+    </Action>
+    <Action>
+      <ConsigneeID>160015023</ConsigneeID>
+      <ConsignorID>197100978407</ConsignorID>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>I/652/109348</ActionId>
+      <ActionReference>I/652/109348</ActionReference>
+      <IsCod>false</IsCod>
+      <SpecialInstructions />
+      <Dates>
+        <DueAt>2019-08-15</DueAt>
+      </Dates>
+      <Properties>
+        <FixedMst>10</FixedMst>
+        <VariableMSt>10</VariableMSt>
+        <AmountExcl>0</AmountExcl>
+        <AmountIncl>0</AmountIncl>
+        <Discount>0</Discount>
+        <Pallets>0</Pallets>
+        <Units>0</Units>
+        <Volume>0</Volume>
+        <Weight>0</Weight>
+        <Dimensions>
+          <Height>0</Height>
+          <Length>0</Length>
+          <Width>0</Width>
+        </Dimensions>
+      </Properties>
+      <Products>
+        <Product>
+          <IsSpecified>false</IsSpecified>
+          <Barcode>wo016134+3267</Barcode>
+          <ProductCode>NSMATSW-MADRIDTJ1520</ProductCode>
+          <ProductModel>Madrid TJ 1520</ProductModel>
+          <Description>Lala - Madrid Queen Size Bed (Mattress)</Description>
+          <InternalReference>200818445</InternalReference>
+          <Properties>
+            <FixedMst>0</FixedMst>
+            <VariableMSt>0</VariableMSt>
+            <AmountExcl>0</AmountExcl>
+            <AmountIncl>0</AmountIncl>
+            <Discount>0</Discount>
+            <Pallets>0</Pallets>
+            <Units>1</Units>
+            <Volume>0</Volume>
+            <Weight>0</Weight>
+            <Dimensions>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Width>0</Width>
+            </Dimensions>
+          </Properties>
+        </Product>
+      </Products>
+    </Action>
+    <Action>
+      <ConsigneeID>160016450</ConsigneeID>
+      <ConsignorID>197100978407</ConsignorID>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>I/652/109413</ActionId>
+      <ActionReference>I/652/109413</ActionReference>
       <IsCod>false</IsCod>
       <SpecialInstructions>; </SpecialInstructions>
       <Dates>
-        <DueAt>2019-07-30</DueAt>
+        <DueAt>2019-08-15</DueAt>
       </Dates>
       <Properties>
         <FixedMst>10</FixedMst>
@@ -348,11 +383,11 @@
       <Products>
         <Product>
           <IsSpecified>false</IsSpecified>
-          <Barcode>CND61150J5</Barcode>
-          <ProductCode>NS-LTHP15P4G35EA</ProductCode>
-          <ProductModel>P4G35EA</ProductModel>
-          <Description>HP 15 Notebook</Description>
-          <InternalReference>200782373</InternalReference>
+          <Barcode>idk138124i-00643</Barcode>
+          <ProductCode>NSCTVPAN-TH65FX435Q</ProductCode>
+          <ProductModel>TH-65FX435Q</ProductModel>
+          <Description>Panasonic 65 Smart UHD LED TV</Description>
+          <InternalReference>200818553</InternalReference>
           <Properties>
             <FixedMst>0</FixedMst>
             <VariableMSt>0</VariableMSt>
@@ -372,11 +407,11 @@
         </Product>
         <Product>
           <IsSpecified>false</IsSpecified>
-          <Barcode>CND61159D6</Barcode>
-          <ProductCode>NSLTHP15P4G35EA</ProductCode>
-          <ProductModel>P4G35EA</ProductModel>
-          <Description>HP 15 Notebook</Description>
-          <InternalReference>200782374</InternalReference>
+          <Barcode>42BKTSW01</Barcode>
+          <ProductCode>NSMISC-42BKTSW</ProductCode>
+          <ProductModel>TVARMECPL01S</ProductModel>
+          <Description>Plasma Swivel Wall Mount</Description>
+          <InternalReference>200818553</InternalReference>
           <Properties>
             <FixedMst>0</FixedMst>
             <VariableMSt>0</VariableMSt>
@@ -397,16 +432,16 @@
       </Products>
     </Action>
     <Action>
-      <ConsigneeID>160006200</ConsigneeID>
+      <ConsigneeID>160024160</ConsigneeID>
       <ConsignorID>197100978407</ConsignorID>
-      <Type>Pickup</Type>
-      <Nature>Collection</Nature>
-      <ActionId>Adhoc_160006200</ActionId>
-      <ActionReference>Adhoc_160006200</ActionReference>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>I/652/109429</ActionId>
+      <ActionReference>I/652/109429</ActionReference>
       <IsCod>false</IsCod>
-      <SpecialInstructions>"collect unit  - Sams 43"" TV - # UAFG452445ER"</SpecialInstructions>
+      <SpecialInstructions />
       <Dates>
-        <DueAt>2019-07-30</DueAt>
+        <DueAt>2019-08-15</DueAt>
       </Dates>
       <Properties>
         <FixedMst>10</FixedMst>
@@ -427,705 +462,255 @@
       <Products>
         <Product>
           <IsSpecified>false</IsSpecified>
-          <Barcode>NA</Barcode>
-          <ProductCode>NA</ProductCode>
+          <Barcode>idk138124i-00645</Barcode>
+          <ProductCode>NSCTVPAN-TH65FX435Q</ProductCode>
+          <ProductModel>TH-65FX435Q</ProductModel>
+          <Description>Panasonic 65 Smart UHD LED TV</Description>
+          <InternalReference>200818574</InternalReference>
+          <Properties>
+            <FixedMst>0</FixedMst>
+            <VariableMSt>0</VariableMSt>
+            <AmountExcl>0</AmountExcl>
+            <AmountIncl>0</AmountIncl>
+            <Discount>0</Discount>
+            <Pallets>0</Pallets>
+            <Units>1</Units>
+            <Volume>0</Volume>
+            <Weight>0</Weight>
+            <Dimensions>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Width>0</Width>
+            </Dimensions>
+          </Properties>
+        </Product>
+      </Products>
+    </Action>
+    <Action>
+      <ConsigneeID>160024160</ConsigneeID>
+      <ConsignorID>197100978407</ConsignorID>
+      <Type>Pickup</Type>
+      <Nature>Collection</Nature>
+      <ActionId>D/652/49120</ActionId>
+      <ActionReference>D/652/49120</ActionReference>
+      <IsCod>false</IsCod>
+      <SpecialInstructions />
+      <Dates>
+        <DueAt>2019-08-15</DueAt>
+      </Dates>
+      <Properties>
+        <FixedMst>10</FixedMst>
+        <VariableMSt>10</VariableMSt>
+        <AmountExcl>0</AmountExcl>
+        <AmountIncl>0</AmountIncl>
+        <Discount>0</Discount>
+        <Pallets>0</Pallets>
+        <Units>0</Units>
+        <Volume>0</Volume>
+        <Weight>0</Weight>
+        <Dimensions>
+          <Height>0</Height>
+          <Length>0</Length>
+          <Width>0</Width>
+        </Dimensions>
+      </Properties>
+      <Products>
+        <Product>
+          <IsSpecified>false</IsSpecified>
+          <Barcode>3TE65F18261601F58SJ0136</Barcode>
+          <ProductCode>NSCTVHSNS65A6130UW</ProductCode>
+          <ProductModel>65A6130UW</ProductModel>
+          <Description>Hisense 65 Smart UHD LED TV</Description>
+          <InternalReference>200818573</InternalReference>
+          <Properties>
+            <FixedMst>0</FixedMst>
+            <VariableMSt>0</VariableMSt>
+            <AmountExcl>0</AmountExcl>
+            <AmountIncl>0</AmountIncl>
+            <Discount>0</Discount>
+            <Pallets>0</Pallets>
+            <Units>1</Units>
+            <Volume>0</Volume>
+            <Weight>0</Weight>
+            <Dimensions>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Width>0</Width>
+            </Dimensions>
+          </Properties>
+        </Product>
+      </Products>
+    </Action>
+    <Action>
+      <ConsigneeID>160022291</ConsigneeID>
+      <ConsignorID>197100978407</ConsignorID>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>I/652/109372</ActionId>
+      <ActionReference>I/652/109372</ActionReference>
+      <IsCod>false</IsCod>
+      <SpecialInstructions>; </SpecialInstructions>
+      <Dates>
+        <DueAt>2019-08-15</DueAt>
+      </Dates>
+      <Properties>
+        <FixedMst>10</FixedMst>
+        <VariableMSt>10</VariableMSt>
+        <AmountExcl>0</AmountExcl>
+        <AmountIncl>0</AmountIncl>
+        <Discount>0</Discount>
+        <Pallets>0</Pallets>
+        <Units>0</Units>
+        <Volume>0</Volume>
+        <Weight>0</Weight>
+        <Dimensions>
+          <Height>0</Height>
+          <Length>0</Length>
+          <Width>0</Width>
+        </Dimensions>
+      </Properties>
+      <Products>
+        <Product>
+          <IsSpecified>false</IsSpecified>
+          <Barcode>3te50f18100801f3vsj1135</Barcode>
+          <ProductCode>NSCTVHSN50A6100</ProductCode>
+          <ProductModel>50A6100UW</ProductModel>
+          <Description>Hisense 50 Smart UHD LED TV</Description>
+          <InternalReference>200818370</InternalReference>
+          <Properties>
+            <FixedMst>0</FixedMst>
+            <VariableMSt>0</VariableMSt>
+            <AmountExcl>0</AmountExcl>
+            <AmountIncl>0</AmountIncl>
+            <Discount>0</Discount>
+            <Pallets>0</Pallets>
+            <Units>1</Units>
+            <Volume>0</Volume>
+            <Weight>0</Weight>
+            <Dimensions>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Width>0</Width>
+            </Dimensions>
+          </Properties>
+        </Product>
+        <Product>
+          <IsSpecified>false</IsSpecified>
+          <Barcode>3TE50F17031101GB8SJ0059</Barcode>
+          <ProductCode>NSCTVHSNS50N3000UW</ProductCode>
+          <ProductModel>50N3000UW</ProductModel>
+          <Description>Hisense 50 Smart Ultra HD LED TV</Description>
+          <InternalReference>200818371</InternalReference>
+          <Properties>
+            <FixedMst>0</FixedMst>
+            <VariableMSt>0</VariableMSt>
+            <AmountExcl>0</AmountExcl>
+            <AmountIncl>0</AmountIncl>
+            <Discount>0</Discount>
+            <Pallets>0</Pallets>
+            <Units>1</Units>
+            <Volume>0</Volume>
+            <Weight>0</Weight>
+            <Dimensions>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Width>0</Width>
+            </Dimensions>
+          </Properties>
+        </Product>
+      </Products>
+    </Action>
+    <Action>
+      <ConsigneeID>160023484</ConsigneeID>
+      <ConsignorID>197100978407</ConsignorID>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>Adhoc_160023484</ActionId>
+      <ActionReference>Adhoc_160023484</ActionReference>
+      <IsCod>false</IsCod>
+      <SpecialInstructions>email sent to warehouse to collect the loan unit tomorrow 13/08 from the customer , loan to be collected is Product Code: NS-WMSAMSWA13F5S | Serial Number: p9ji5dbm200019  </SpecialInstructions>
+      <Dates>
+        <DueAt>2019-08-15</DueAt>
+      </Dates>
+      <Properties>
+        <FixedMst>10</FixedMst>
+        <VariableMSt>10</VariableMSt>
+        <AmountExcl>0</AmountExcl>
+        <AmountIncl>0</AmountIncl>
+        <Discount>0</Discount>
+        <Pallets>0</Pallets>
+        <Units>0</Units>
+        <Volume>0</Volume>
+        <Weight>0</Weight>
+        <Dimensions>
+          <Height>0</Height>
+          <Length>0</Length>
+          <Width>0</Width>
+        </Dimensions>
+      </Properties>
+      <Products>
+        <Product>
+          <IsSpecified>false</IsSpecified>
+          <Barcode>p9ji5dbm200019</Barcode>
+          <ProductCode>NS-WMSAMSWA13F5S</ProductCode>
+          <ProductModel>WA13F5S2UWW</ProductModel>
+          <Description>Samsung 13kg White Top Loader Washing Machine</Description>
+          <InternalReference>100005976</InternalReference>
+          <Properties>
+            <FixedMst>0</FixedMst>
+            <VariableMSt>0</VariableMSt>
+            <AmountExcl>0</AmountExcl>
+            <AmountIncl>0</AmountIncl>
+            <Discount>0</Discount>
+            <Pallets>0</Pallets>
+            <Units>1</Units>
+            <Volume>0</Volume>
+            <Weight>0</Weight>
+            <Dimensions>
+              <Height>0</Height>
+              <Length>0</Length>
+              <Width>0</Width>
+            </Dimensions>
+          </Properties>
+        </Product>
+      </Products>
+    </Action>
+    <Action>
+      <ConsigneeID>3552</ConsigneeID>
+      <ConsignorID>197100978407</ConsignorID>
+      <Type>Dropoff</Type>
+      <Nature>Installation</Nature>
+      <ActionId>Adhoc_3552</ActionId>
+      <ActionReference>Adhoc_3552</ActionReference>
+      <IsCod>false</IsCod>
+      <SpecialInstructions>Good dayPlease deliver unit back to Tv MeccaSony PlayStation 4 1TB Pro ConsoleKind regardsKatie</SpecialInstructions>
+      <Dates>
+        <DueAt>2019-08-15</DueAt>
+      </Dates>
+      <Properties>
+        <FixedMst>10</FixedMst>
+        <VariableMSt>10</VariableMSt>
+        <AmountExcl>0</AmountExcl>
+        <AmountIncl>0</AmountIncl>
+        <Discount>0</Discount>
+        <Pallets>0</Pallets>
+        <Units>0</Units>
+        <Volume>0</Volume>
+        <Weight>0</Weight>
+        <Dimensions>
+          <Height>0</Height>
+          <Length>0</Length>
+          <Width>0</Width>
+        </Dimensions>
+      </Properties>
+      <Products>
+        <Product>
+          <IsSpecified>false</IsSpecified>
+          <Barcode />
+          <ProductCode />
           <ProductModel />
-          <Description>NA</Description>
-          <InternalReference>100004168</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160015188</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Dropoff</Type>
-      <Nature>Installation</Nature>
-      <ActionId>I/652/101079</ActionId>
-      <ActionReference>I/652/101079</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions />
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>00290761198011001488</Barcode>
-          <ProductCode>NSWMBSHWAB1606SZA</ProductCode>
-          <ProductModel>WAB1606SZA</ProductModel>
-          <Description>Bosch 6kg Silver Inox Front Loader Washing Machine</Description>
-          <InternalReference>200782368</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160021665</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Dropoff</Type>
-      <Nature>Installation</Nature>
-      <ActionId>I/652/101073</ActionId>
-      <ActionReference>I/652/101073</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions>please call customer before delivering 0823095692</SpecialInstructions>
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>3TE40M18097301FB7A53966</Barcode>
-          <ProductCode>NSCTVHSNHX40N2176F</ProductCode>
-          <ProductModel>HX40N2176F</ProductModel>
-          <Description>Hisense 40� Full HD LED TV</Description>
-          <InternalReference>200781167</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160023017</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Dropoff</Type>
-      <Nature>Installation</Nature>
-      <ActionId>I/652/101078</ActionId>
-      <ActionReference>I/652/101078</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions>phone first; </SpecialInstructions>
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>3te43m18262001fdpa50547</Barcode>
-          <ProductCode>NSCTVHSN43A6100</ProductCode>
-          <ProductModel>43A6100UW</ProductModel>
-          <Description>"Hisense 43"" Smart Ultra HD LED TV"</Description>
-          <InternalReference>200782370</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>3TE32M17325601GDUA57409</Barcode>
-          <ProductCode>NSCTVHSN32N2176H</ProductCode>
-          <ProductModel>HX32N2176H</ProductModel>
-          <Description>"Hisense 32"" HD Ready LED TV"</Description>
-          <InternalReference>200782371</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160027526</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Pickup</Type>
-      <Nature>Collection</Nature>
-      <ActionId>D/652/46978</ActionId>
-      <ActionReference>D/652/46978</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions>phone first</SpecialInstructions>
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>S012535690G</Barcode>
-          <ProductCode>NSPLSTSONYPS4-22</ProductCode>
-          <ProductModel>10228993</ProductModel>
-          <Description>Sony PlayStation 4 1TB Slim Console</Description>
-          <InternalReference>200782367</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160027526</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Dropoff</Type>
-      <Nature>Installation</Nature>
-      <ActionId>I/652/101074</ActionId>
-      <ActionReference>I/652/101074</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions />
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>ghsergse21ererg</Barcode>
-          <ProductCode>NSCTVHSNHN49N2176F</ProductCode>
-          <ProductModel>HN49N2176F</ProductModel>
-          <Description>"Hisense 49"" Full HD LED TV"</Description>
-          <InternalReference>200782381</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160030204</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Dropoff</Type>
-      <Nature>Installation</Nature>
-      <ActionId>I/652/101075</ActionId>
-      <ActionReference>I/652/101075</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions />
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>ACTIVE3090217</Barcode>
-          <ProductCode>NSBBYCHELHCHAIRH</ProductCode>
-          <ProductModel>Active 3 in 1 High Chair - Honeycomb</ProductModel>
-          <Description>Chelino  Active 3-in-1 High Chair- Honeycomb</Description>
-          <InternalReference>200782380</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160030211</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Dropoff</Type>
-      <Nature>Installation</Nature>
-      <ActionId>I/652/101076</ActionId>
-      <ActionReference>I/652/101076</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions>; ; ; </SpecialInstructions>
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>7661559653181030460701</Barcode>
-          <ProductCode>NS-DWDEFYDDW175</ProductCode>
-          <ProductModel>DDW175</ProductModel>
-          <Description>Defy 12 Place White Dishwasher</Description>
-          <InternalReference>200782361</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>DTD2581810023506</Barcode>
-          <ProductCode>NS-TDDEFYDTD258W</ProductCode>
-          <ProductModel>DTD258</ProductModel>
-          <Description>Defy 5kg White Tumble Dryer</Description>
-          <InternalReference>200782362</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>7170241100184005610301</Barcode>
-          <ProductCode>NS-WMDEFYDWD316</ProductCode>
-          <ProductModel>DWD316</ProductModel>
-          <Description>Defy 8kg Metallic Front Loader Washer/ Dryer</Description>
-          <InternalReference>200782363</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>052572 A</Barcode>
-          <ProductCode>NSOTTOMANCL-BL</ProductCode>
-          <ProductModel>LYLAOTTOPUBLK2Y</ProductModel>
-          <Description>Lyla Black PU Ottoman</Description>
-          <InternalReference>200782364</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>160030212</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Dropoff</Type>
-      <Nature>Installation</Nature>
-      <ActionId>I/652/101077</ActionId>
-      <ActionReference>I/652/101077</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions>; ; </SpecialInstructions>
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>SGS15SGSG</Barcode>
-          <ProductCode>NS-DWDEFYDDW147</ProductCode>
-          <ProductModel>DDW147</ProductModel>
-          <Description>Defy White 3 Programme Dishwasher</Description>
-          <InternalReference>200782377</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>dtd2591810078506</Barcode>
-          <ProductCode>NS-TDDEFYDTD259</ProductCode>
-          <ProductModel>DTD259</ProductModel>
-          <Description>Defy 5kg Metallic Tumble Dryer</Description>
-          <InternalReference>200782378</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>00289730197051001179</Barcode>
-          <ProductCode>NSFRDBSHKGN36NL3</ProductCode>
-          <ProductModel>KGN36NL3</ProductModel>
-          <Description>Bosch 302L Silver Combi Fridge/ Freezer</Description>
-          <InternalReference>200782379</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>188800153</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Pickup</Type>
-      <Nature>Collection</Nature>
-      <ActionId>D/652/46979</ActionId>
-      <ActionReference>D/652/46979</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions />
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>6BURNER2712</Barcode>
-          <ProductCode>NSBRALVALECLASS</ProductCode>
-          <ProductModel>Le Classique</ProductModel>
-          <Description>Alva Le Classique 6 Burner Gas Braai</Description>
-          <InternalReference>200782376</InternalReference>
-          <Properties>
-            <FixedMst>0</FixedMst>
-            <VariableMSt>0</VariableMSt>
-            <AmountExcl>0</AmountExcl>
-            <AmountIncl>0</AmountIncl>
-            <Discount>0</Discount>
-            <Pallets>0</Pallets>
-            <Units>1</Units>
-            <Volume>0</Volume>
-            <Weight>0</Weight>
-            <Dimensions>
-              <Height>0</Height>
-              <Length>0</Length>
-              <Width>0</Width>
-            </Dimensions>
-          </Properties>
-        </Product>
-      </Products>
-    </Action>
-    <Action>
-      <ConsigneeID>188800153</ConsigneeID>
-      <ConsignorID>197100978407</ConsignorID>
-      <Type>Pickup</Type>
-      <Nature>Collection</Nature>
-      <ActionId>Adhoc_188800153</ActionId>
-      <ActionReference>Adhoc_188800153</ActionReference>
-      <IsCod>false</IsCod>
-      <SpecialInstructions />
-      <Dates>
-        <DueAt>2019-07-30</DueAt>
-      </Dates>
-      <Properties>
-        <FixedMst>10</FixedMst>
-        <VariableMSt>10</VariableMSt>
-        <AmountExcl>0</AmountExcl>
-        <AmountIncl>0</AmountIncl>
-        <Discount>0</Discount>
-        <Pallets>0</Pallets>
-        <Units>0</Units>
-        <Volume>0</Volume>
-        <Weight>0</Weight>
-        <Dimensions>
-          <Height>0</Height>
-          <Length>0</Length>
-          <Width>0</Width>
-        </Dimensions>
-      </Properties>
-      <Products>
-        <Product>
-          <IsSpecified>false</IsSpecified>
-          <Barcode>00LB3FBJ600336</Barcode>
-          <ProductCode>NSCTVSAMS55MU7000</ProductCode>
-          <ProductModel />
-          <Description>"Samsung 55"" Smart Ultra HD LED TV"</Description>
-          <InternalReference>100004167</InternalReference>
+          <Description />
+          <InternalReference>100005949</InternalReference>
           <Properties>
             <FixedMst>0</FixedMst>
             <VariableMSt>0</VariableMSt>

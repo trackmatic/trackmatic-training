@@ -15,12 +15,12 @@ namespace TeljoySerialiser
     {
         static void Main(string[] args)
         {
-            var tramsformer = new CsvToModelTransformer().Transform("Trackmatic XML Test Cases.txt");
-            SerializeToXml<Stops>("TeljoyTestCases", "c:/temp", tramsformer);
-            var json = tramsformer.ToJson();
+            //var tramsformer = new CsvToModelTransformer().Transform("Trackmatic XML Test Cases.txt");
+            //SerializeToXml<Stops>("TeljoyTestCases", "c:/temp", tramsformer)S;
+            //var json = tramsformer.ToJson();
 
-            //string FileName = "TeljoyTestCasesV2.xml";
-            //SerialiseAndTransform(FileName);
+            string FileName = "TeljoyTestCasesV2.xml";
+            SerialiseAndTransform(FileName);
         }
         public static void SerializeToXml<T>(string filename, string path, T collection)
         {
@@ -35,7 +35,7 @@ namespace TeljoySerialiser
         {
             var Serialiser = new DataContractSerializer(typeof(Stops));
             var consignmentModel = (Stops)Serialiser.ReadObject(File.OpenRead(fileName));
-            consignmentModel.Actions.SelectMany(x => x.Products).Select(x => string.Join(",", x.Barcode, x.ProductModel)).ToList().ForEach(x => System.Console.WriteLine(x));
+            //consignmentModel.Actions.SelectMany(x => x.Products).Select(x => string.Join(",", x.Barcode, x.ProductModel)).ToList().ForEach(x => System.Console.WriteLine(x));
 
             Transform(consignmentModel);
         }
